@@ -26,11 +26,11 @@
 
   /* NAV */
   nav{position:sticky;top:0;z-index:50;background:rgba(12,26,32,.96);backdrop-filter:blur(8px);border-bottom:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
+  nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
   .brand img{height:44px;mix-blend-mode:screen}
   .brand span{font-family:var(--serif);font-size:20px;color:var(--gold-lt);letter-spacing:.02em}
-  .navlinks{display:flex;align-items:center;gap:24px}
+  .navright{display:flex;align-items:center;gap:18px}
   .navlinks a{color:#d8e0e0;text-decoration:none;font-size:14.5px;font-weight:500;opacity:.9}
   .navlinks a:hover{opacity:1;color:#fff}
   .btn{display:inline-block;background:var(--gold);color:#1a1206;text-decoration:none;font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:8px;border:1px solid var(--gold);transition:.15s}
@@ -38,21 +38,24 @@
   .btn.ghost{background:transparent;color:var(--gold-lt);border-color:color-mix(in srgb,var(--gold-lt) 50%,transparent)}
   .btn.ghost:hover{background:color-mix(in srgb,var(--gold-lt) 10%,transparent);color:#fff}
 
-  /* MOBILE MENU */
-  .menu-btn{display:none;background:none;border:0;padding:10px;margin:-10px -6px -10px 0;cursor:pointer;color:var(--gold-lt)}
+  /* MENU (hamburger at all sizes) */
+  .menu-btn{display:block;background:none;border:0;padding:10px;margin:-10px -6px -10px 0;cursor:pointer;color:var(--gold-lt)}
   .menu-btn svg{display:block}
   .menu-btn .icon-close{display:none}
   nav.open .menu-btn .icon-open{display:none}
   nav.open .menu-btn .icon-close{display:block}
+  .navlinks{display:none;position:absolute;top:100%;right:24px;flex-direction:column;align-items:stretch;gap:0;min-width:280px;background:var(--navy-deep);border:1px solid color-mix(in srgb,var(--gold) 25%,transparent);border-top:none;border-radius:0 0 14px 14px;box-shadow:0 18px 30px rgba(0,0,0,.35);overflow:hidden}
+  nav.open .navlinks{display:flex}
+  .navlinks a:not(.btn){padding:15px 24px;font-size:16px;opacity:1;border-top:1px solid rgba(255,255,255,.08)}
+  .navlinks a:not(.btn):first-child{border-top:none}
+  .navlinks .btn{margin:14px 24px 20px;text-align:center}
   @media(max-width:860px){
-    .menu-btn{display:block}
-    .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--navy-deep);border-bottom:1px solid color-mix(in srgb,var(--gold) 25%,transparent);box-shadow:0 18px 30px rgba(0,0,0,.35)}
-    nav.open .navlinks{display:flex}
-    .navlinks a:not(.btn){padding:15px 24px;font-size:16px;opacity:1;border-top:1px solid rgba(255,255,255,.08)}
-    .navlinks .btn{margin:14px 24px 20px;text-align:center}
+    .navlinks{left:0;right:0;min-width:0;border-radius:0;border-left:none;border-right:none}
     .brand img{height:38px}
     .brand span{font-size:18px}
   }
+  @media(max-width:640px){.nav-cta{display:none}}
+  @media(min-width:641px){.navlinks .btn{display:none}}
 
   /* HERO */
   header.hero{background:radial-gradient(85% 65% at 18% 8%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 62%),radial-gradient(75% 55% at 84% 16%, color-mix(in srgb,var(--green) 32%,transparent), transparent 58%),linear-gradient(168deg, var(--navy) 0%, var(--navy-deep) 100%);color:#f2ece1;text-align:center;padding:34px 0 56px}
@@ -183,10 +186,13 @@
 <nav id="sitenav">
   <div class="wrap">
     <a class="brand" href="#top"><img src="../../assets/logo-dark.png" alt="Beloved Minds"><span>beloved minds</span></a>
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
-      <svg class="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      <svg class="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
+    <div class="navright">
+      <a class="btn nav-cta" href="#contact">Request a Pilot</a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+        <svg class="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
     <div class="navlinks" id="navlinks">
       <a href="#mission">Mission</a>
       <a href="#how">How It Works</a>
