@@ -1,0 +1,345 @@
+BELOVED MINDS WEBSITE
+PROPRIETARY COMMERCIAL SOFTWARE LICENSE
+
+Copyright © 2026 SkyHold Technologies, LLC, an Idaho limited liability
+company. All rights reserved.
+
+"Beloved Minds" is a product, brand, and trade name of SkyHold Technologies,
+LLC ("SkyHold," "Licensor," "we," "us," or "our").
+
+================================================================================
+NOTICE
+================================================================================
+
+THIS IS PROPRIETARY AND CONFIDENTIAL SOFTWARE. IT IS NOT OPEN SOURCE AND IS NOT
+FREE SOFTWARE.
+
+No right to use, copy, modify, or distribute this software or its contents is
+granted by mere possession of, or access to, this repository. A license must be
+purchased from SkyHold Technologies, LLC and granted in writing.
+
+If you have obtained a copy of this software without a written license from
+SkyHold, you are not authorized to use it. Please delete all copies in your
+possession and contact us at the address in Section 16.
+
+================================================================================
+1. DEFINITIONS
+================================================================================
+
+1.1 "Software" means the contents of this repository in whole or in part,
+including all HTML, CSS, JavaScript, Python source code, build scripts,
+configuration files, and any updates, modifications, enhancements, or derivative
+works thereof provided by SkyHold.
+
+1.2 "Assets" means all non-code materials contained in or distributed with the
+Software, including without limitation logos, wordmarks, icons, favicons,
+photographs, illustrations, color systems, typography selections, layouts, page
+designs, marketing copy, mission and vision statements, product descriptions,
+and all other text and imagery.
+
+1.3 "License Agreement" means a separate written agreement executed between
+SkyHold and a purchaser that expressly grants rights in the Software, including
+any purchase order, statement of work, master services agreement, or signed
+license schedule referencing this license.
+
+1.4 "Licensee" means the individual or legal entity identified as the licensed
+party in a valid License Agreement.
+
+1.5 "Authorized Users" means employees or contractors of Licensee who are bound
+by confidentiality obligations at least as protective as those in Section 8, and
+whose access is reasonably necessary to exercise the rights granted.
+
+================================================================================
+2. OWNERSHIP
+================================================================================
+
+2.1 The Software and Assets are owned exclusively by SkyHold and are protected
+by United States copyright law, international copyright treaties, trade secret
+law, trademark law, and other applicable intellectual property laws.
+
+2.2 The Software and Assets are licensed, not sold. SkyHold retains all right,
+title, and interest in and to the Software and Assets, including all
+intellectual property rights therein. No ownership interest transfers to
+Licensee under any circumstance.
+
+2.3 All rights not expressly granted in writing are reserved by SkyHold. No
+rights are granted by implication, estoppel, course of dealing, or otherwise.
+
+================================================================================
+3. NO LICENSE WITHOUT PURCHASE
+================================================================================
+
+3.1 Absent a valid, executed, and paid-current License Agreement, NO license of
+any kind is granted, and any use, reproduction, execution, display,
+modification, or distribution of the Software or Assets constitutes copyright
+infringement and may constitute misappropriation of trade secrets.
+
+3.2 Access to this repository — whether granted intentionally, inadvertently,
+through a third-party platform, through an employment or contractor
+relationship, or otherwise — does not constitute a license and does not create
+any right to use the Software or Assets beyond the scope of the access
+expressly granted.
+
+================================================================================
+4. GRANT OF LICENSE
+================================================================================
+
+Subject to Licensee's full compliance with this license, timely payment of all
+applicable fees, and the terms of an executed License Agreement, SkyHold grants
+Licensee a limited, non-exclusive, non-transferable, non-sublicensable,
+revocable license, for the term stated in the License Agreement, to:
+
+  (a) install, execute, and internally reproduce the Software solely for the
+      purposes and on the systems expressly identified in the License
+      Agreement;
+
+  (b) deploy and publicly display the Software solely on the internet domains
+      expressly identified in the License Agreement; and
+
+  (c) modify the Software solely for Licensee's own internal use as permitted
+      by the License Agreement, provided that all such modifications remain
+      subject to every restriction in this license and that SkyHold retains
+      ownership of the underlying Software.
+
+Any use outside this scope requires SkyHold's prior written consent.
+
+================================================================================
+5. RESTRICTIONS
+================================================================================
+
+Except to the extent expressly permitted by an executed License Agreement or
+required by applicable law notwithstanding contractual prohibition, Licensee
+shall NOT, and shall not permit any third party to:
+
+  (a) copy, reproduce, publish, or republish the Software or Assets;
+
+  (b) sell, resell, rent, lease, lend, sublicense, distribute, transfer,
+      assign, or otherwise make the Software or Assets available to any third
+      party;
+
+  (c) host, offer, or operate the Software as a service, template, theme,
+      website builder output, or other offering for the benefit of any third
+      party;
+
+  (d) create derivative works from, or incorporate any portion of, the Software
+      or Assets into any other product, website, codebase, or offering;
+
+  (e) reverse engineer, decompile, disassemble, or otherwise attempt to derive
+      source code, structure, or trade secrets from any portion of the Software
+      distributed in non-source form;
+
+  (f) remove, obscure, alter, or falsify any copyright notice, trademark,
+      proprietary legend, attribution, or this license file;
+
+  (g) use the Software or Assets to build, train, fine-tune, evaluate, or
+      benchmark any machine learning or artificial intelligence model, or
+      include them in any dataset or corpus used for such purposes;
+
+  (h) use the Software or Assets to develop, market, or operate any product or
+      service that competes with Beloved Minds or SkyHold;
+
+  (i) use the Beloved Minds name, logo, trade dress, or brand assets in any
+      manner not expressly authorized in writing, including in any manner
+      likely to cause confusion as to source, sponsorship, or affiliation;
+
+  (j) publicly disclose, publish, or share the Software, Assets, or any
+      benchmark, performance, or evaluation results relating to them; or
+
+  (k) circumvent or attempt to circumvent any technical, contractual, or access
+      restriction applicable to the Software.
+
+================================================================================
+6. ASSETS, BRAND, AND CONTENT
+================================================================================
+
+6.1 The Assets are separately and independently protected. A license to the
+Software does not, by itself, convey any right to reproduce, display, or
+distribute the Assets outside the specific deployment authorized in the License
+Agreement.
+
+6.2 Photographs and likenesses of identified individuals appearing in the
+Assets may be subject to separate personality, publicity, model release, or
+privacy rights. No right to use any such likeness is granted by this license.
+
+6.3 Marketing copy, mission and vision statements, and other written content in
+the Assets are original works of authorship owned by SkyHold and may not be
+copied or adapted for any other website, product, or organization.
+
+================================================================================
+7. TRADEMARKS
+================================================================================
+
+"Beloved Minds," "SkyHold Technologies," the Beloved Minds logo and tree mark,
+the tagline "Connecting Hearts & Minds, One Call At A Time," and all related
+names, logos, marks, and trade dress are trademarks or service marks of SkyHold
+Technologies, LLC, whether or not registered. This license grants no trademark
+rights whatsoever. Any goodwill arising from permitted use inures solely to the
+benefit of SkyHold.
+
+================================================================================
+8. CONFIDENTIALITY
+================================================================================
+
+8.1 The Software, the Assets, and any unreleased content contained in this
+repository — including unreleased branding, pricing, pilot terms, partner
+names, and product roadmap information — are the confidential information and
+trade secrets of SkyHold.
+
+8.2 Licensee shall (a) hold such information in strict confidence, (b) use it
+solely to exercise the rights granted, (c) disclose it only to Authorized Users
+with a genuine need to know, and (d) protect it with no less than a reasonable
+degree of care and in no event less care than it uses for its own confidential
+information of like importance.
+
+8.3 These obligations survive termination or expiration of this license and any
+License Agreement, and continue for so long as the information remains a trade
+secret or, for information not constituting a trade secret, for five (5) years
+following disclosure.
+
+================================================================================
+9. FEEDBACK
+================================================================================
+
+If Licensee provides suggestions, ideas, corrections, or other feedback
+regarding the Software, SkyHold may use and incorporate that feedback without
+restriction, attribution, or compensation, and Licensee assigns to SkyHold all
+rights in such feedback.
+
+================================================================================
+10. TERM AND TERMINATION
+================================================================================
+
+10.1 This license is effective only during the term stated in the applicable
+License Agreement.
+
+10.2 SkyHold may terminate this license immediately upon written notice if
+Licensee breaches any term of this license or of the License Agreement,
+including any failure to pay fees when due.
+
+10.3 Upon expiration or termination, Licensee shall immediately cease all use
+of the Software and Assets, remove all deployed instances from all public and
+private systems, and permanently delete or destroy all copies in its
+possession or control, certifying such destruction in writing upon SkyHold's
+request.
+
+10.4 Sections 2, 5, 6, 7, 8, 9, 10.3, 11, 12, 13, 14, and 15 survive
+termination.
+
+================================================================================
+11. DISCLAIMER OF WARRANTIES
+================================================================================
+
+THE SOFTWARE AND ASSETS ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT
+WARRANTY OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY. SKYHOLD EXPRESSLY
+DISCLAIMS ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY, AND NON-INFRINGEMENT. SKYHOLD DOES
+NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR
+THAT DEFECTS WILL BE CORRECTED.
+
+WITHOUT LIMITING THE FOREGOING, THE SOFTWARE IS MARKETING AND INFORMATIONAL
+WEBSITE SOFTWARE. IT IS NOT A MEDICAL DEVICE, IS NOT INTENDED FOR THE
+DIAGNOSIS, TREATMENT, CURE, OR PREVENTION OF ANY DISEASE OR CONDITION, AND IS
+NOT AN EMERGENCY OR LIFE-SAFETY SYSTEM. STATEMENTS REGARDING REGULATORY
+COMPLIANCE (INCLUDING HIPAA) DESCRIBE THE BELOVED MINDS SERVICE OFFERING AND
+ARE NOT A WARRANTY THAT THIS WEBSITE SOFTWARE, AS DEPLOYED OR MODIFIED BY
+LICENSEE, IS COMPLIANT WITH ANY LAW OR STANDARD. LICENSEE IS SOLELY RESPONSIBLE
+FOR ITS OWN REGULATORY COMPLIANCE.
+
+================================================================================
+12. LIMITATION OF LIABILITY
+================================================================================
+
+12.1 TO THE MAXIMUM EXTENT PERMITTED BY LAW, SKYHOLD SHALL NOT BE LIABLE FOR
+ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE
+DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR BUSINESS
+INTERRUPTION, ARISING OUT OF OR RELATING TO THIS LICENSE OR THE SOFTWARE,
+REGARDLESS OF THE THEORY OF LIABILITY AND EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+12.2 SKYHOLD'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THIS
+LICENSE AND THE SOFTWARE SHALL NOT EXCEED THE TOTAL LICENSE FEES ACTUALLY PAID
+BY LICENSEE TO SKYHOLD UNDER THE APPLICABLE LICENSE AGREEMENT IN THE TWELVE
+(12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM.
+
+12.3 These limitations apply notwithstanding the failure of essential purpose of
+any limited remedy. Some jurisdictions do not allow certain exclusions or
+limitations; in such jurisdictions, SkyHold's liability is limited to the
+greatest extent permitted by law.
+
+================================================================================
+13. REMEDIES
+================================================================================
+
+Licensee acknowledges that any breach of Sections 5, 6, 7, or 8 would cause
+irreparable harm to SkyHold for which monetary damages would be an inadequate
+remedy. SkyHold is therefore entitled to seek injunctive and other equitable
+relief without the necessity of posting a bond or proving actual damages, in
+addition to all other remedies available at law or in equity.
+
+================================================================================
+14. GOVERNING LAW AND VENUE
+================================================================================
+
+14.1 This license is governed by the laws of the State of Idaho, United States
+of America, without regard to its conflict of laws principles. The United
+Nations Convention on Contracts for the International Sale of Goods does not
+apply.
+
+14.2 The exclusive venue for any dispute arising out of or relating to this
+license shall be the state or federal courts located in Ada County, Idaho, and
+the parties consent to the personal jurisdiction of those courts and waive any
+objection to venue or forum non conveniens.
+
+================================================================================
+15. GENERAL
+================================================================================
+
+15.1 Order of Precedence. In the event of a conflict between this license and an
+executed License Agreement, the License Agreement controls to the extent of the
+conflict.
+
+15.2 Assignment. Licensee may not assign or transfer this license, by operation
+of law, merger, change of control, or otherwise, without SkyHold's prior
+written consent. Any attempted assignment in violation of this section is void.
+SkyHold may freely assign this license.
+
+15.3 Severability. If any provision is held unenforceable, it shall be modified
+to the minimum extent necessary to make it enforceable, and the remaining
+provisions remain in full force and effect.
+
+15.4 No Waiver. No failure or delay by SkyHold in exercising any right
+constitutes a waiver of that or any other right.
+
+15.5 Entire Agreement. This license, together with any executed License
+Agreement, constitutes the entire agreement between the parties regarding the
+Software and supersedes all prior or contemporaneous understandings on the
+subject.
+
+15.6 U.S. Government Rights. The Software is "commercial computer software"
+under FAR 12.212 and DFARS 227.7202. Government use, duplication, or disclosure
+is subject to the restrictions of this license.
+
+15.7 Export. Licensee shall comply with all applicable U.S. and international
+export control and sanctions laws.
+
+================================================================================
+16. LICENSING AND CONTACT
+================================================================================
+
+To purchase a license, request permissions beyond the scope of this license, or
+report unauthorized use:
+
+  SkyHold Technologies, LLC
+  An Idaho limited liability company
+  Idaho, United States of America
+
+  Beloved Minds
+  Rebeccamccallum@belovedminds.care
+  Davidbeneduci@belovedminds.care
+  (208) 957-9985
+
+================================================================================
+
+Unauthorized use, reproduction, or distribution of this Software or the Assets
+may result in severe civil and criminal penalties, and will be prosecuted to
+the maximum extent possible under the law.

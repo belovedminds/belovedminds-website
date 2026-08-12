@@ -1,2 +1,5 @@
 .DS_Store
 *.log
+
+# source photos (web-optimized copies live in assets/)
+img/

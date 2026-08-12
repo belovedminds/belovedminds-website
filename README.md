@@ -1,1 +1,203 @@
-.
+# Beloved Minds — Marketing Website
+
+Daily AI-powered wellness phone calls for memory care and assisted living
+residents. This repository contains the public marketing site at
+**belovedminds.care**.
+
+> **Proprietary and confidential.** © 2026 SkyHold Technologies, LLC, an Idaho
+> limited liability company. All rights reserved. Beloved Minds is a product and
+> brand of SkyHold Technologies, LLC. This is **not** open source — use requires
+> a purchased license. See [LICENSE](LICENSE).
+
+---
+
+## Contents
+
+- [Overview](#overview)
+- [Tech stack](#tech-stack)
+- [Repository layout](#repository-layout)
+- [How the theme build works](#how-the-theme-build-works) ← **read before editing**
+- [Local development](#local-development)
+- [Deployment](#deployment)
+- [Routes](#routes)
+- [Open items](#open-items)
+- [Contact](#contact)
+
+---
+
+## Overview
+
+A single-page marketing site aimed at memory care and assisted living
+**facility operators** (not direct-to-consumer). It covers the problem framing,
+how the daily call works, the platform feature set, mission and vision, the
+facility offering, the giving-back program, the founding team, and a pilot
+inquiry form.
+
+The site is intentionally dependency-free: no framework, no bundler, no npm.
+Everything is hand-written HTML with an inline `<style>` block, plus a small
+Python script that generates color variants.
+
+## Tech stack
+
+| Layer | Choice |
+| --- | --- |
+| Markup | Static HTML5, single page |
+| Styling | Inline `<style>` block, CSS custom properties for the palette |
+| Fonts | System font stacks only (no webfont requests) |
+| JavaScript | A small inline script (mobile menu toggle, form guard) — no framework |
+| Theming | `build-variants.py` (Python 3, standard library only) |
+| Hosting | AWS Amplify Hosting (static) |
+
+No build step is required to deploy — Amplify serves the committed HTML directly.
+The Python script is a **local authoring tool**, not part of the deploy pipeline.
+
+## Repository layout
+
+```
+├── template.html            ← SOURCE OF TRUTH. Edit this file.
+├── index.html               ← GENERATED. The live site (Royal Plum theme).
+├── build-variants.py        ← Regenerates index.html + all variants.
+├── privacy.html             ← Standalone policy page (draft — legal review pending).
+├── terms.html               ← Standalone policy page (draft — legal review pending).
+├── cancellation.html        ← Standalone policy page (draft — legal review pending).
+├── plum/index.html          ← GENERATED. Same page as index.html, serves at /plum.
+├── archive/                 ← GENERATED. Retired looks, each with an "archived" banner.
+│   ├── heritage/index.html  ←   Heritage Green (the original look) → /archive/heritage
+│   ├── slate/index.html     ←   Slate Blue → /archive/slate
+│   └── clay/index.html      ←   Warm Clay → /archive/clay
+└── assets/
+    ├── logo-gold.png        ← Hero logo (edge-feathered via CSS mask)
+    ├── logo-color.png       ← Full-color logo
+    ├── logo-dark.png        ← Footer logo
+    ├── logo-tree.jpg        ← Tree mark
+    ├── loretta-williams.jpg / alessandra-la-bruzzo.jpg / lucile-cameron.jpg
+    │                        ← "In loving memory" tribute photos (web-optimized)
+    ├── favicon.svg / .png / -32.png / -180.png
+    └── reference-*.png      ← Design references from stakeholder review (not shipped in page)
+```
+
+## How the theme build works
+
+**This is the one thing to understand before editing anything.**
+
+`template.html` is the source of truth. `index.html`, `plum/`, and `archive/`
+are **generated output**. If you edit `index.html` directly, your
+changes are silently destroyed the next time anyone runs the build script.
+
+```
+                        ┌─→ index.html                    (Royal Plum — the live site)
+template.html ──build──→├─→ plum/index.html               (same page, ../ asset paths)
+                        └─→ archive/*/index.html          (heritage, slate, clay + banner)
+```
+
+`build-variants.py` holds a `THEMES` list. Each theme supplies only a set of CSS
+custom properties (and optionally a few extra CSS rules for a distinct feel).
+The script regex-replaces the `:root{...}` block and the `theme-color` meta tag,
+so **page content never forks across themes** — there is exactly one copy of the
+copy, markup, and layout.
+
+`DEFAULT_SLUG = "plum"` marks which theme becomes the live `index.html`. Royal
+Plum was selected in July 2026; the other three are kept buildable but are
+written to `archive/<slug>/` with a banner linking back to the live site.
+
+### Editing workflow
+
+```bash
+# 1. Edit the source
+$EDITOR template.html
+
+# 2. Regenerate index.html and all variants
+python build-variants.py
+
+# 3. Review, then commit BOTH template.html and the generated files
+git add template.html index.html plum/ archive/
+git commit -m "…"
+```
+
+Generated files are committed to the repo on purpose — Amplify deploys them
+as-is with no build step.
+
+### Changing the palette
+
+Edit the `vars` dict for the relevant theme in `build-variants.py`, then rerun
+it. To promote a different look to the live site, change `DEFAULT_SLUG` and
+rerun. Note that the archive-vs-live split also affects asset path prefixes
+(`""` for `index.html`, `"../"` for `plum/`, `"../../"` for `archive/*/`),
+which the script handles automatically.
+
+The script reads and writes UTF-8 explicitly, so it behaves the same on Windows
+(where the locale default would otherwise be cp1252 and fail on the em dashes
+and symbols in the page) as it does on macOS and Linux.
+
+## Local development
+
+No install, no dependencies. Serve the directory over HTTP:
+
+```bash
+python -m http.server 8000
+# → http://localhost:8000
+```
+
+Opening `index.html` directly via `file://` mostly works, but serving over HTTP
+is recommended so relative asset paths and the root-relative links (footer
+policy pages) behave the way they do in production.
+
+Requires Python 3 only if you need to regenerate themes.
+
+## Deployment
+
+Hosted on **AWS Amplify Hosting** as a static site (no build command, output
+directory `/`). Pushing to `main` triggers a deploy.
+
+Clean URLs need **no host configuration**: each variant is generated as a
+directory index (`plum/index.html`, `archive/heritage/index.html`, …), so any
+static host serves them at:
+
+| URL | Serves |
+| --- | --- |
+| `/` | `index.html` (live site) |
+| `/plum` | `plum/index.html` |
+| `/archive/heritage` | `archive/heritage/index.html` |
+| `/archive/slate` | `archive/slate/index.html` |
+| `/archive/clay` | `archive/clay/index.html` |
+
+The `/plum` review link was shared with stakeholders — keep it working even
+though it now mirrors the live site.
+
+## Routes
+
+The live page is a single scrolling document. In-page anchors:
+
+`#top` · `#how` · `#mission` · `#facilities` · `#giving` · `#team` · `#contact`
+
+## Open items
+
+Marked in the source with `<!-- EDIT: -->` comments:
+
+- [ ] **Contact form is not wired up.** `index.html` currently has
+      `action="#"` with `onsubmit="return false"` — it silently does nothing.
+      Needs connecting to an email service (Resend, Formspree, or similar).
+      Fix in `template.html`, then rebuild.
+- [ ] **Legal policy pages are drafts.** `privacy.html`, `terms.html`, and
+      `cancellation.html` exist and are linked from the footer, but the text is
+      draft placeholder copy — replace with counsel-reviewed policies.
+- [ ] **Pilot terms reassurance line** — final wording pending.
+- [ ] **Photography for "What Makes Us Different"** — pending from stakeholder.
+- [ ] **Footer entity name** reads "Beloved Minds LLC," which does not match the
+      SkyHold Technologies, LLC ownership recorded in [LICENSE](LICENSE).
+      Confirm the correct legal entity and align the two.
+
+## Contact
+
+**SkyHold Technologies, LLC** — Idaho, USA
+
+- Rebecca McCallum-Cameron — Rebeccamccallum@belovedminds.care
+- David Beneduci — Davidbeneduci@belovedminds.care
+- (208) 957-9985
+
+---
+
+*Connecting Hearts & Minds, One Call At A Time.*
+
+Beloved Minds provides daily wellness connection and is not a medical or
+emergency service.

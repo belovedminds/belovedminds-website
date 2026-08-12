@@ -5,29 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beloved Minds — Daily Wellness Calls for Memory Care</title>
 <meta name="description" content="Beloved Minds delivers daily AI-powered wellness phone calls to memory care and assisted living residents — reducing isolation, supporting cognition, and keeping families connected. Built for facilities.">
-<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
-<meta name="theme-color" content="#47241b">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/favicon-180.png">
+<meta name="theme-color" content="#241033">
 <style>
   :root{
-    --navy:#6b3b2e; --navy-deep:#47241b; --green:#6e7d3f; --green-dk:#55632f;
-    --gold:#c8743f; --gold-lt:#e6a368; --cream:#f7efe4; --paper:#fffdf8;
-    --ink:#33271f; --muted:#6e5f52; --line:#ecdfcf;
+    --navy:#3a2150; --navy-deep:#241033; --green:#8a5cb0; --green-dk:#6a3f92;
+    --gold:#c28f3c; --gold-lt:#ecd49a; --gold-deep:#866014; --cream:#f6f1f7; --paper:#fffdfb;
+    --ink:#2a1c33; --muted:#6c5d75; --line:#e6dced;
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;letter-spacing:-.01em}
   a{color:inherit}
 
   /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:rgba(12,26,32,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(194,145,58,.25)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  nav{position:sticky;top:0;z-index:50;background:rgba(12,26,32,.96);backdrop-filter:blur(8px);border-bottom:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
   .brand img{height:44px;mix-blend-mode:screen}
   .brand span{font-family:var(--serif);font-size:20px;color:var(--gold-lt);letter-spacing:.02em}
   .navlinks{display:flex;align-items:center;gap:24px}
@@ -35,12 +35,27 @@
   .navlinks a:hover{opacity:1;color:#fff}
   .btn{display:inline-block;background:var(--gold);color:#1a1206;text-decoration:none;font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:8px;border:1px solid var(--gold);transition:.15s}
   .btn:hover{background:var(--gold-lt);border-color:var(--gold-lt)}
-  .btn.ghost{background:transparent;color:var(--gold-lt);border-color:rgba(224,199,137,.5)}
-  .btn.ghost:hover{background:rgba(224,199,137,.1);color:#fff}
-  @media(max-width:860px){.navlinks a:not(.btn){display:none}}
+  .btn.ghost{background:transparent;color:var(--gold-lt);border-color:color-mix(in srgb,var(--gold-lt) 50%,transparent)}
+  .btn.ghost:hover{background:color-mix(in srgb,var(--gold-lt) 10%,transparent);color:#fff}
+
+  /* MOBILE MENU */
+  .menu-btn{display:none;background:none;border:0;padding:10px;margin:-10px -6px -10px 0;cursor:pointer;color:var(--gold-lt)}
+  .menu-btn svg{display:block}
+  .menu-btn .icon-close{display:none}
+  nav.open .menu-btn .icon-open{display:none}
+  nav.open .menu-btn .icon-close{display:block}
+  @media(max-width:860px){
+    .menu-btn{display:block}
+    .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--navy-deep);border-bottom:1px solid color-mix(in srgb,var(--gold) 25%,transparent);box-shadow:0 18px 30px rgba(0,0,0,.35)}
+    nav.open .navlinks{display:flex}
+    .navlinks a:not(.btn){padding:15px 24px;font-size:16px;opacity:1;border-top:1px solid rgba(255,255,255,.08)}
+    .navlinks .btn{margin:14px 24px 20px;text-align:center}
+    .brand img{height:38px}
+    .brand span{font-size:18px}
+  }
 
   /* HERO */
-  header.hero{background:radial-gradient(85% 65% at 18% 8%, rgba(200,161,62,.20), transparent 62%),radial-gradient(75% 55% at 84% 16%, rgba(138,92,176,.32), transparent 58%),linear-gradient(168deg, var(--navy) 0%, var(--navy-deep) 100%);color:#f2ece1;text-align:center;padding:34px 0 56px}
+  header.hero{background:radial-gradient(85% 65% at 18% 8%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 62%),radial-gradient(75% 55% at 84% 16%, color-mix(in srgb,var(--green) 32%,transparent), transparent 58%),linear-gradient(168deg, var(--navy) 0%, var(--navy-deep) 100%);color:#f2ece1;text-align:center;padding:34px 0 56px}
   header.hero img.logo{width:min(300px,62vw);mix-blend-mode:screen;margin:0 auto 2px;-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 76%);mask-image:radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 76%)}
   header.hero h1{font-size:clamp(28px,4.4vw,44px);color:#fff;margin:10px auto 14px;max-width:16ch}
   header.hero p.sub{font-size:clamp(16px,2.2vw,20px);color:#cdd8d7;max-width:50ch;margin:0 auto 30px}
@@ -54,7 +69,7 @@
 
   /* SECTIONS */
   section{padding:74px 0}
-  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700;color:var(--gold)}
+  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700;color:var(--gold-deep)}
   section h2{font-size:clamp(26px,3.6vw,38px);margin:10px 0 16px;max-width:22ch}
   .lede{font-size:18px;color:var(--muted);max-width:62ch;margin:0 0 8px}
   .center{text-align:center}.center h2,.center .lede{margin-left:auto;margin-right:auto}
@@ -63,7 +78,7 @@
   .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
   @media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 1px 3px rgba(20,30,30,.04)}
-  .card .ic{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;background:rgba(47,107,79,.1);margin-bottom:14px}
+  .card .ic{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;background:color-mix(in srgb,var(--green) 12%,transparent);margin-bottom:14px}
   .card h3{font-size:20px;margin:0 0 8px}
   .card p{margin:0;color:var(--muted);font-size:15px}
 
@@ -92,7 +107,7 @@
   .mv{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .mvgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}
   @media(max-width:820px){.mvgrid{grid-template-columns:1fr}}
-  .mvcard{background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:28px}
+  .mvcard{background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold-deep);border-radius:14px;padding:28px}
   .mvcard h3{font-size:22px;margin:0 0 10px;color:var(--green-dk)}
   .mvcard p{margin:0;color:#3a4a4d;font-size:15.5px}
 
@@ -101,20 +116,32 @@
   @media(max-width:820px){.valgrid{grid-template-columns:1fr}}
   .val{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
   .val h3{font-size:17.5px;margin:0 0 7px;color:var(--ink)}
-  .val h3 .num{font-family:var(--sans);color:var(--gold);font-weight:700;margin-right:8px}
+  .val h3 .num{font-family:var(--sans);color:var(--gold-deep);font-weight:700;margin-right:8px}
   .val p{margin:0;color:var(--muted);font-size:14.5px}
 
   /* FACILITIES */
   .facilities{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .statband{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
   .stat{flex:1;min-width:170px;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-  .stat .n{font-family:var(--serif);font-size:30px;color:var(--green);font-weight:600}
+  .stat .n{font-family:var(--serif);font-size:30px;color:var(--green-dk);font-weight:600}
   .stat .l{color:var(--muted);font-size:14px}
 
   /* GIVING */
   .giving{background:var(--green-dk);color:#eaf3ee;text-align:center}
   .giving h2{color:#fff}.giving .lede{color:#cfe2d6}
-  .pledge{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(224,199,137,.4);border-radius:999px;padding:12px 26px;margin-top:18px;font-family:var(--serif);font-size:19px;color:var(--gold-lt)}
+  .pledge{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid color-mix(in srgb,var(--gold-lt) 40%,transparent);border-radius:999px;padding:12px 26px;margin-top:18px;font-family:var(--serif);font-size:19px;color:var(--gold-lt)}
+
+  /* TRIBUTE */
+  .tribute{margin-top:54px;text-align:center}
+  .tribute h3{font-size:clamp(21px,2.8vw,27px);margin:10px auto 12px;max-width:26ch}
+  .tribute .lede{margin-left:auto;margin-right:auto}
+  .tribgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:880px;margin:30px auto 0}
+  @media(max-width:820px){.tribgrid{grid-template-columns:1fr;max-width:340px}}
+  .trib{margin:0;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:14px 14px 10px;text-align:center}
+  .trib img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:10px;display:block}
+  .trib figcaption{padding:12px 4px 6px}
+  .trib figcaption b{display:block;font-family:var(--serif);font-weight:600;font-size:17.5px;color:var(--ink)}
+  .trib figcaption span{font-size:13px;color:var(--muted)}
 
   /* TEAM */
   .team2{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:820px;margin:36px auto 0}
@@ -123,7 +150,7 @@
   .person .av{width:78px;height:78px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;
     font-family:var(--serif);font-size:26px;color:#1a1206;font-weight:600;background:radial-gradient(circle at 50% 35%,var(--gold-lt),var(--gold))}
   .person h3{font-size:20px;margin:0}
-  .person .role{color:var(--gold);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin:3px 0 12px}
+  .person .role{color:var(--gold-deep);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin:3px 0 12px}
   .person p{color:var(--muted);font-size:14.5px;margin:0;text-align:left}
 
   /* CONTACT */
@@ -145,21 +172,21 @@
   footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:17px}
   footer .small{opacity:.8;max-width:50ch}
 
-  /* Warm Clay tweaks */
-  nav{background:rgba(71,36,27,.96)}.btn{border-radius:999px}.card{border-radius:16px}.eyebrow{letter-spacing:.2em}h1,h2,h3{letter-spacing:-.015em}
+  /* Royal Plum tweaks */
+  nav{background:rgba(36,16,51,.96)}.btn{border-radius:999px}.card{border-radius:18px}.mvcard,.val,.stat{border-radius:16px}
 </style>
 </head>
 <body>
-<div style="background:#11181b;color:#e7d9b6;font:600 13px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:10px 16px;display:flex;justify-content:center;gap:16px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)">
-  <span>Archived look: <b style="color:#fff">Warm Clay</b></span>
-  <a href="/" style="color:#e0c789;text-decoration:none">&larr; Live site</a>
-</div>
 
 <!-- NAV -->
-<nav>
+<nav id="sitenav">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="../../assets/logo-dark.png" alt="Beloved Minds"><span>beloved minds</span></a>
-    <div class="navlinks">
+    <a class="brand" href="#top"><img src="../assets/logo-dark.png" alt="Beloved Minds"><span>beloved minds</span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+      <svg class="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="navlinks" id="navlinks">
       <a href="#mission">Mission</a>
       <a href="#how">How It Works</a>
       <a href="#facilities">For Facilities</a>
@@ -172,7 +199,7 @@
 <!-- HERO -->
 <header class="hero" id="top">
   <div class="wrap">
-    <img class="logo" src="../../assets/logo-gold.png" alt="Beloved Minds — Connecting Hearts and Minds">
+    <img class="logo" src="../assets/logo-gold.png" alt="Beloved Minds — Connecting Hearts and Minds">
     <h1>Daily wellness calls for memory care</h1>
     <p class="sub">A warm, familiar voice that calls every enrolled resident every day — reducing isolation, supporting cognition, and keeping families connected. No app. Just connection.</p>
     <div class="hero-cta">
@@ -236,7 +263,7 @@
         <p class="lede">Every other approach focuses on the words. Beloved Minds focuses on the voice itself — its warmth, tone, and pacing, purposefully designed to calm, reassure, and bring comfort to people living with dementia and Alzheimer's.</p>
         <p class="lede">That is the heart of our platform: connection delivered through a voice engineered to feel safe and familiar.</p>
       </div>
-      <div class="treecard"><img src="../../assets/logo-tree.jpg" alt="Beloved Minds tree of life and dove"></div>
+      <div class="treecard"><img src="../assets/logo-tree.jpg" alt="Beloved Minds tree of life and dove"></div>
     </div>
   </div>
 </section>
@@ -282,6 +309,49 @@
       <div class="mvcard">
         <h3>Our Vision</h3>
         <p>A world where no person living with dementia goes a single day without a voice that knows their name, remembers their story, and calls them — not because staff had time, but because we built a system that never forgets. Where families stay genuinely connected, not just occasionally informed. Where early awareness replaces late discovery. And where the sound of a familiar, calming voice is recognized as what it truly is — not just comfort, but care.</p>
+      </div>
+    </div>
+    <!-- TRIBUTE — the women who inspired Beloved Minds. EDIT: captions are editable below. -->
+    <div class="tribute">
+      <p class="eyebrow">In loving memory</p>
+      <h3>The women who inspired Beloved Minds</h3>
+      <p class="lede">Beloved Minds began with the people we loved and cared for ourselves. Their memory guides every call we make.</p>
+      <div class="tribgrid">
+        <figure class="trib">
+          <img src="../assets/loretta-williams.jpg" alt="Loretta Williams smiling" loading="lazy">
+          <figcaption><b>Loretta Williams</b><span>Beloved aunt · lived with dementia</span></figcaption>
+        </figure>
+        <figure class="trib">
+          <img src="../assets/alessandra-la-bruzzo.jpg" alt="Alessandra La Bruzzo smiling at a family gathering" loading="lazy">
+          <figcaption><b>Alessandra La Bruzzo</b><span>David's grandmother · lived with Alzheimer's</span></figcaption>
+        </figure>
+        <figure class="trib">
+          <img src="../assets/lucile-cameron.jpg" alt="Lucile Cameron smiling" loading="lazy">
+          <figcaption><b>Lucile Cameron</b><span>Beloved grandmother · lived with Alzheimer's</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="wrap center">
+    <p class="eyebrow">Our team</p>
+    <h2>Led by people who have spent their lives serving others</h2>
+    <p class="lede">Beloved Minds, an Idaho-based company, is led by founders who pair a heart for vulnerable people with the operational discipline to deliver — every day, at scale.</p>
+    <div class="team2">
+      <div class="person">
+        <div class="av">RM</div>
+        <h3>Rebecca McCallum-Cameron</h3>
+        <div class="role">Co-Founder &amp; CEO</div>
+        <p>Rebecca brings a background in caregiving, health and wellness advocacy, business ownership, and technical support. She is the founder of Peace of Mind — a caregiving, daycare, and home services business — and has spent her career serving vulnerable people with dignity and genuine care.</p>
+      </div>
+      <div class="person">
+        <div class="av">DB</div>
+        <h3>David Beneduci</h3>
+        <div class="role">Co-Founder &amp; COO</div>
+        <p>David brings operational discipline and deep technical experience — from safety supervision at Halliburton and gas systems at Micron Technology to roles spanning AVX Electronic Corporation, restaurant operations, and lead driver and trainer at Carson Oil. He keeps Beloved Minds disciplined, reliable, and built to scale.</p>
       </div>
     </div>
   </div>
@@ -339,29 +409,6 @@
   </div>
 </section>
 
-<!-- TEAM -->
-<section id="team">
-  <div class="wrap center">
-    <p class="eyebrow">Our team</p>
-    <h2>Led by people who have spent their lives serving others</h2>
-    <p class="lede">Beloved Minds, an Idaho-based company, is led by founders who pair a heart for vulnerable people with the operational discipline to deliver — every day, at scale.</p>
-    <div class="team2">
-      <div class="person">
-        <div class="av">RM</div>
-        <h3>Rebecca McCallum-Cameron</h3>
-        <div class="role">Co-Founder &amp; CEO</div>
-        <p>Rebecca brings a background in caregiving, health and wellness advocacy, business ownership, and technical support. She is the founder of Peace of Mind — a caregiving, daycare, and home services business — and has spent her career serving vulnerable people with dignity and genuine care.</p>
-      </div>
-      <div class="person">
-        <div class="av">DB</div>
-        <h3>David Beneduci</h3>
-        <div class="role">Co-Founder &amp; COO</div>
-        <p>David brings operational discipline and deep technical experience — from safety supervision at Halliburton and gas systems at Micron Technology to roles spanning AVX Electronic Corporation, restaurant operations, and lead driver and trainer at Carson Oil. He keeps Beloved Minds disciplined, reliable, and built to scale.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
@@ -399,12 +446,25 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="fbrand"><img src="../../assets/logo-dark.png" alt="Beloved Minds"><b>beloved minds</b></div>
+    <div class="fbrand"><img src="../assets/logo-dark.png" alt="Beloved Minds"><b>beloved minds</b></div>
     <div class="small">© 2026 Beloved Minds LLC · Idaho, USA · Connecting Hearts &amp; Minds, One Call At A Time. HIPAA-compliant, built with healthcare-grade security. Beloved Minds provides daily wellness connection and is not a medical or emergency service.</div>
-    <!-- EDIT: link the final policy documents when ready -->
-    <div class="small" style="width:100%"><a href="#" style="color:inherit">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:inherit">Terms of Service</a> &nbsp;·&nbsp; <a href="#" style="color:inherit">Cancellation Policy</a></div>
+    <!-- EDIT: replace draft policy text in these pages before launch -->
+    <div class="small" style="width:100%"><a href="/privacy.html" style="color:inherit">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:inherit">Terms of Service</a> &nbsp;·&nbsp; <a href="/cancellation.html" style="color:inherit">Cancellation Policy</a></div>
   </div>
 </footer>
 
+<script>
+(function(){
+  var nav=document.getElementById('sitenav'),btn=nav.querySelector('.menu-btn');
+  function setOpen(open){
+    nav.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open);
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  }
+  btn.addEventListener('click',function(){setOpen(!nav.classList.contains('open'))});
+  nav.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){setOpen(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false)});
+})();
+</script>
 </body>
 </html>
