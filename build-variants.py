@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+"""Generate palette/style variants of index.html into variants/ plus a picker page.
+
+Single source of truth = index.html. Each theme below only overrides the CSS
+:root color variables (and optionally a little extra CSS for a distinct feel),
+so the content never forks. Re-run this whenever index.html changes.
+"""
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+SRC = (ROOT / "template.html").read_text()
+OUT = ROOT / "variants"
+OUT.mkdir(exist_ok=True)
+
+# name, slug, blurb, palette vars, extra css for a slightly different feel
+THEMES = [
+    {
+        "slug": "heritage",
+        "name": "Heritage Green",
+        "blurb": "Deep forest green and gold. Established, warm, trustworthy — the current look.",
+        "vars": dict(navy="13323d", navy_deep="0c1a20", green="2f6b4f", green_dk="244f3b",
+                     gold="c2913a", gold_lt="e0c789", cream="faf6ee", paper="fffdf9",
+                     ink="1d2a2d", muted="5d6e72", line="e8e1d2"),
+        "css": "",
+    },
+    {
+        "slug": "plum",
+        "name": "Royal Plum",
+        "blurb": "Rich aubergine purple and gold — matches the new reference image. Elegant, premium, dignified.",
+        "vars": dict(navy="3a2150", navy_deep="241033", green="8a5cb0", green_dk="6a3f92",
+                     gold="c8a13e", gold_lt="ecd49a", cream="f6f1f7", paper="fffdfb",
+                     ink="2a1c33", muted="6c5d75", line="e6dced"),
+        "css": "nav{background:rgba(36,16,51,.96)}.btn{border-radius:999px}.card{border-radius:18px}"
+               ".mvcard,.val,.stat{border-radius:16px}",
+    },
+    {
+        "slug": "slate",
+        "name": "Slate Blue",
+        "blurb": "Calm healthcare blue with warm gold. Clinical, reassuring, professional.",
+        "vars": dict(navy="1f3a5c", navy_deep="122438", green="2f8296", green_dk="1f6274",
+                     gold="cda24a", gold_lt="ecd49a", cream="f3f6f9", paper="ffffff",
+                     ink="16283b", muted="566778", line="dde5ec"),
+        "css": "nav{background:rgba(18,36,56,.96)}.card{border-radius:12px}.btn{border-radius:6px}"
+               "header.hero{padding:60px 0 84px}",
+    },
+    {
+        "slug": "clay",
+        "name": "Warm Clay",
+        "blurb": "Terracotta and cocoa over cream. Warm, earthy, human — the most distinct of the set.",
+        "vars": dict(navy="6b3b2e", navy_deep="47241b", green="6e7d3f", green_dk="55632f",
+                     gold="c8743f", gold_lt="e6a368", cream="f7efe4", paper="fffdf8",
+                     ink="33271f", muted="6e5f52", line="ecdfcf"),
+        "css": "nav{background:rgba(71,36,27,.96)}.btn{border-radius:999px}.card{border-radius:16px}"
+               ".eyebrow{letter-spacing:.2em}h1,h2,h3{letter-spacing:-.015em}",
+    },
+]
+
+ROOT_TMPL = """:root{{
+    --navy:#{navy}; --navy-deep:#{navy_deep}; --green:#{green}; --green-dk:#{green_dk};
+    --gold:#{gold}; --gold-lt:#{gold_lt}; --cream:#{cream}; --paper:#{paper};
+    --ink:#{ink}; --muted:#{muted}; --line:#{line};
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }}"""
+
+# Rebecca picked Royal Plum (2026-07) — it builds as the live site (index.html).
+# The other looks are kept buildable but archived under variants/archive/.
+DEFAULT_SLUG = "plum"
+ARCHIVE = OUT / "archive"
+ARCHIVE.mkdir(exist_ok=True)
+
+BANNER = """<div style="background:#11181b;color:#e7d9b6;font:600 13px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:10px 16px;display:flex;justify-content:center;gap:16px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)">
+  <span>Archived look: <b style="color:#fff">{name}</b></span>
+  <a href="/" style="color:#e0c789;text-decoration:none">&larr; Live site</a>
+</div>"""
+
+def render(t, asset_prefix, banner):
+    html = SRC
+    new_root = ROOT_TMPL.format(**t["vars"])
+    html = re.sub(r":root\{.*?\}", new_root, html, count=1, flags=re.DOTALL)
+    html = re.sub(r'(<meta name="theme-color" content=")#[0-9a-fA-F]{3,6}(">)',
+                  rf'\g<1>#{t["vars"]["navy_deep"]}\g<2>', html)
+    if t["css"]:
+        html = html.replace("</style>", f"\n  /* {t['name']} tweaks */\n  {t['css']}\n</style>", 1)
+    if asset_prefix:
+        html = html.replace('src="assets/', f'src="{asset_prefix}assets/')
+        html = html.replace('href="assets/', f'href="{asset_prefix}assets/')
+    if banner:
+        html = html.replace("<body>\n", "<body>\n" + BANNER.format(name=t["name"]) + "\n", 1)
+    return html
+
+for t in THEMES:
+    if t["slug"] == DEFAULT_SLUG:
+        (ROOT / "index.html").write_text(render(t, "", banner=False))
+        print("wrote index.html (live site — Royal Plum)")
+        # keep /plum serving the same page (Rebecca's link)
+        (OUT / f"{t['slug']}.html").write_text(render(t, "../", banner=False))
+        print(f"wrote variants/{t['slug']}.html")
+    else:
+        (ARCHIVE / f"{t['slug']}.html").write_text(render(t, "../../", banner=True))
+        print(f"wrote variants/archive/{t['slug']}.html (archived)")
