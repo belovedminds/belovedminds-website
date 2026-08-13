@@ -1,6 +1,6 @@
 # Beloved Minds — Marketing Website
 
-Daily AI-powered wellness phone calls for memory care and assisted living
+Daily AI-powered phone calls for memory care and assisted living
 residents. This repository contains the public marketing site at
 **belovedminds.care**.
 
@@ -178,10 +178,23 @@ Marked in the source with `<!-- EDIT: -->` comments:
       `action="#"` with `onsubmit="return false"` — it silently does nothing.
       Needs connecting to an email service (Resend, Formspree, or similar).
       Fix in `template.html`, then rebuild.
-- [ ] **Legal policy pages are drafts.** `privacy.html`, `terms.html`, and
-      `cancellation.html` exist and are linked from the footer, but the text is
-      draft placeholder copy — replace with counsel-reviewed policies.
-- [ ] **Pilot terms reassurance line** — final wording pending.
+- [x] **`privacy.html`** — rebuilt from the counsel-drafted HIPAA Privacy Policy
+      (v1.0, effective 2026-08-15). Public-facing adaptation, not the verbatim
+      internal document, which is marked Confidential. Adds a website-visitor section.
+- [x] **`cancellation.html`** — the counsel-drafted Cancellation Policy, near-verbatim.
+      Effective date set to 2026-08-13; the source document leaves it blank, so set
+      the same date on the signed copy.
+- [ ] **`terms.html` — short "Website Terms," not counsel-drafted.** Deliberately
+      narrow: site is informational, signed agreements control, not-a-medical-service
+      disclaimer, IP/seal, no warranty. Worth a glance from counsel, but it creates no
+      contractual rights by design so it cannot conflict with the FSA.
+- [ ] **Hero card profile is invented.** The "Resident care profile" card in the hero
+      (engagement level, confusion response, conversation topics) is placeholder content.
+      Rebecca to supply a real, permissioned, anonymized profile. Marked `<!-- EDIT: -->`
+      in `template.html`.
+- [ ] **Contact form uses `mailto:`.** Submissions open the sender's mail client addressed
+      to support@belovedminds.care — they are not delivered server-side, so some will be
+      lost. Swap `action` to a Formspree/Resend endpoint for real inbox delivery.
 - [ ] **Photography for "What Makes Us Different"** — pending from stakeholder.
 - [ ] **Footer entity name** reads "Beloved Minds LLC," which does not match the
       SkyHold Technologies, LLC ownership recorded in [LICENSE](LICENSE).
@@ -199,5 +212,5 @@ Marked in the source with `<!-- EDIT: -->` comments:
 
 *Connecting Hearts & Minds, One Call At A Time.*
 
-Beloved Minds provides daily wellness connection and is not a medical or
+Beloved Minds provides daily connection and is not a medical or
 emergency service.

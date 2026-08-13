@@ -18,10 +18,13 @@
   header a{color:var(--gold-lt);text-decoration:none;font-size:14.5px;font-weight:600}
   h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,38px);margin:14px 0 0}
   main{padding:44px 0 70px}
-  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:34px 0 8px}
+  h2{font-family:var(--serif);font-weight:600;font-size:22px;margin:36px 0 8px}
+  h3{font-family:var(--serif);font-weight:600;font-size:17px;margin:20px 0 4px}
   p,li{color:var(--ink);font-size:15.5px}
+  ul{padding-left:22px}
+  li{margin-bottom:8px}
   .meta{color:var(--muted);font-size:14px}
-  .notice{background:#fffdfb;border:1px solid var(--line);border-left:4px solid var(--gold-deep);border-radius:10px;padding:14px 18px;color:var(--muted);font-size:14px}
+  .pull{background:#fffdfb;border:1px solid var(--line);border-left:4px solid var(--gold-deep);border-radius:10px;padding:14px 18px;margin:18px 0;font-size:15.5px}
   footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:13.5px}
   footer a{color:inherit}
 </style>
@@ -29,39 +32,88 @@
 <body>
 <header><div class="wrap"><a href="/">&larr; Beloved Minds home</a><h1>Privacy Policy</h1></div></header>
 <main><div class="wrap">
-  <p class="meta">Last updated: <!-- EDIT: set date at launch -->August 2026</p>
-  <!-- EDIT: DRAFT — replace with counsel-reviewed policy before launch -->
-  <div class="notice">This policy is being finalized. If you have questions about how we handle your information in the meantime, contact us at <a href="mailto:Rebeccamccallum@belovedminds.care">Rebeccamccallum@belovedminds.care</a>.</div>
+  <p class="meta">Beloved Minds LLC · Effective August 15, 2026 · Version 1.0</p>
 
   <h2>Who we are</h2>
-  <p>Beloved Minds LLC ("Beloved Minds," "we," "us") is an Idaho-based company providing daily AI-powered wellness phone calls to residents of memory care and assisted living communities, in partnership with those facilities and residents' families.</p>
+  <p>Beloved Minds LLC ("Beloved Minds," "we," "us") provides daily AI phone calls to residents of memory care and assisted living communities, in partnership with those facilities and residents' families.</p>
+  <p>Under HIPAA, Beloved Minds operates as a <b>Business Associate</b> to the memory care facilities we serve, which are the Covered Entities. We access Protected Health Information (PHI) only as permitted by our Business Associate Agreement with each facility and as required or permitted by HIPAA.</p>
 
-  <h2>Information we collect</h2>
+  <h2>Information we access</h2>
+  <h3>Resident information</h3>
   <ul>
-    <li><b>Enrollment information</b> provided by the facility or family — such as a resident's name, phone number, and the personal details (family names, memories, preferences) used to personalize calls.</li>
-    <li><b>Call and wellness information</b> — conversation content, engagement and mood signals, and wellness flags generated from calls.</li>
-    <li><b>Contact information</b> you submit through our website forms or by email.</li>
+    <li>Resident name and preferred name or nickname</li>
+    <li>Room number or unit designation</li>
+    <li>Cognitive Engagement Level setting, Confusion Response Mode, and any communication limitations relevant to the call (for example, hearing difficulty)</li>
+    <li>Family contact information, provided by the family at authorization</li>
+    <li>Topics of interest, hobbies, and background details provided by the family to personalize calls</li>
   </ul>
+  <h3>Call data</h3>
+  <ul>
+    <li>Call records generated during calls</li>
+    <li>Call timestamps, duration, and connection status</li>
+    <li>Resident responses, mood indicators, and engagement notes captured during calls</li>
+    <li>Observations identified by the system during calls, including Priority Alerts</li>
+  </ul>
+  <div class="pull">Beloved Minds does <b>not</b> collect, store, or process resident billing or insurance information, clinical records, medication data, or diagnostic information. Our access is limited strictly to what is necessary to deliver personalized calls.</div>
 
   <h2>How we use it</h2>
   <ul>
-    <li>To deliver and personalize daily wellness calls.</li>
-    <li>To surface wellness, mood, and engagement insights to authorized facility staff and family members.</li>
-    <li>To alert staff and family promptly if a resident appears to be in distress.</li>
-    <li>To operate, secure, and improve our service.</li>
+    <li><b>Service delivery</b> — personalizing calls for individual residents, routing calls, and generating post-call summaries for facility staff review.</li>
+    <li><b>Operations and quality</b> — monitoring call quality, improving our platform, evaluating effectiveness, and training our workforce. Training involving PHI happens only after HIPAA training is complete, is limited to the minimum necessary, and is subject to the same access controls and audit logging as all other access.</li>
+    <li><b>Reporting to facilities</b> — call outcomes, engagement summaries, and any Priority Alerts. Confusion and other cognitive symptoms that are typical for a resident are recorded as part of their trajectory over time but do not, on their own, generate a Priority Alert. Priority Alerts are raised only for actionable changes from a resident's baseline, such as pain, physical symptoms, or distress that represents a change from normal.</li>
+    <li><b>Disclosures to authorized family contacts</b> — where the facility has designated that individual and a signed Family Authorization Form is on file. These are limited to the resident's profile through the family dashboard, a synopsis of each call, and delivery of the resident's Heirloom Collection where the conditions are met.</li>
+    <li><b>Required disclosures</b> — as required by law, including to the U.S. Department of Health and Human Services for compliance investigations.</li>
   </ul>
-  <p>We do not sell personal information.</p>
+
+  <div class="pull"><b>We do not use PHI to train artificial intelligence models, and we do not permit our technology vendors to do so.</b> We do not use or disclose PHI for marketing purposes, and we do not sell PHI.</div>
+
+  <h2>Minimum necessary</h2>
+  <p>Access to PHI is limited to personnel who require it for their specific job functions. System access is role-based and restricted by technical controls. Information shared with subcontractors or technology vendors is limited to what is essential to their function. Information disclosed to a resident's authorized family contact is limited to that resident's own information.</p>
 
   <h2>Security</h2>
-  <p>Resident conversations and wellness data are encrypted, access-controlled, and handled to healthcare privacy standards. Beloved Minds is built to be HIPAA-compliant.</p>
+  <ul>
+    <li>All PHI is encrypted in transit using TLS 1.2 or higher</li>
+    <li>All PHI stored at rest is encrypted using AES-256 or equivalent</li>
+    <li>Role-based access controls limit access to authorized personnel only</li>
+    <li>Unique user credentials are required for all system access; shared credentials are prohibited</li>
+    <li>Automatic session timeouts are enforced on all systems containing PHI</li>
+    <li>Audit logs capture all access to PHI and are reviewed regularly</li>
+    <li>A designated HIPAA Compliance Officer oversees policy, training, and compliance</li>
+    <li>Workforce training on HIPAA privacy and security is completed before any access to PHI, and repeated annually</li>
+    <li>Regular risk assessments are conducted to identify and address vulnerabilities</li>
+  </ul>
+  <p>All subcontractors and technology vendors who access PHI on our behalf must execute a Business Associate Agreement and maintain safeguards equivalent to those required by HIPAA. Executed agreements are maintained on file and available to facility clients on request.</p>
 
-  <h2>Your choices</h2>
-  <p>Families and facilities may review, update, or request deletion of a resident's information, or unenroll a resident at any time, by contacting us.</p>
+  <h2>How long we keep it</h2>
+  <ul>
+    <li><b>When a resident's service ends</b> — information relating to that resident is permanently deleted thirty (30) days after the resident is disenrolled or the facility's agreement terminates, regardless of the reason service ended. Where the resident's Heirloom Collection is eligible for delivery, it is delivered within that thirty-day window before deletion. A resident whose service is paused, and a resident whose facility's service is suspended, remains enrolled and their data is retained while the facility's agreement remains active.</li>
+    <li><b>When a Business Associate Agreement terminates</b> — all PHI received from or created on behalf of that facility is returned or securely destroyed within thirty (30) days, and call records are purged from all active systems.</li>
+    <li><b>Compliance documentation</b> — our HIPAA policies, training records, risk assessments, business associate agreements, signed family authorization forms, and breach reports are retained for a minimum of six (6) years, as HIPAA requires. This is separate from the schedule above; documentation is retained even after the underlying resident data has been deleted.</li>
+  </ul>
+  <p>Where we retain or use de-identified data, de-identification is performed in accordance with the HIPAA Safe Harbor method (45 CFR 164.514(b)(2)), removing all eighteen categories of identifiers. Data that has not been de-identified to that standard is treated as PHI.</p>
 
-  <h2>Contact</h2>
-  <p>Beloved Minds LLC · Idaho, USA<br>
-  <a href="mailto:Rebeccamccallum@belovedminds.care">Rebeccamccallum@belovedminds.care</a> · (208) 957-9985</p>
+  <h2>Breach notification</h2>
+  <p>In the event of a breach of unsecured PHI, we will notify the affected facility without unreasonable delay and no later than ten (10) calendar days after discovery, describe the nature of the information involved and what occurred, cooperate fully with any notifications the facility must make, and document the breach and our response as HIPAA requires. We maintain a separate Breach Response Plan covering internal procedures for identifying, containing, investigating, and reporting incidents.</p>
+
+  <h2>Resident and family rights</h2>
+  <p>Requests from residents or their authorized representatives to access, amend, or receive an accounting of PHI are directed to and handled by the facility, not by Beloved Minds. Where a facility needs information we hold in order to respond, we provide it within the timeframe specified in the applicable Business Associate Agreement.</p>
+  <p>Where a resident or their representative believes information we hold is inaccurate — including an observation, Priority Alert, summary, or synopsis generated by the service — a request for amendment is directed to the facility. Where the facility determines an amendment is warranted, we correct the record and, where practicable, notify any party to whom the inaccurate information was previously disclosed.</p>
+  <p>Beloved Minds does not independently evaluate individual rights requests and does not determine whether a requesting party holds legal authority; that determination rests with the facility. This does not apply to a resident's profile, including Family-Seeded Memories, which is maintained through the family dashboard.</p>
+
+  <h2>Website visitors</h2>
+  <p>If you contact us through this website, the information you submit — your name, facility, email address, and message — is sent to us by email so that we can respond to your enquiry. We use it for that purpose only. We do not sell it, and we do not add you to marketing lists without your consent. This website does not use advertising or tracking cookies.</p>
+
+  <h2>State law</h2>
+  <p>In addition to HIPAA, Beloved Minds complies with applicable state privacy and breach-notification laws in the states where it operates and where affected individuals reside. Where state law imposes stricter requirements than HIPAA, the stricter requirement applies.</p>
+
+  <h2>Complaints and contact</h2>
+  <p>Facilities, residents (through their facilities), or any individual with concerns about our privacy practices may contact our HIPAA Compliance Officer:</p>
+  <p><b>Rebecca McCallum</b>, Co-Founder &amp; CEO · HIPAA Compliance Officer<br>
+  Beloved Minds LLC · Boise, Idaho<br>
+  <a href="mailto:support@belovedminds.care">support@belovedminds.care</a></p>
+  <p>Individuals also have the right to file a complaint with the U.S. Department of Health and Human Services, Office for Civil Rights: HHS Office for Civil Rights, 200 Independence Avenue S.W., Washington, D.C. 20201 · 1-800-368-1019 · <a href="https://www.hhs.gov/ocr">hhs.gov/ocr</a>. Beloved Minds will not retaliate against any individual for filing a complaint in good faith.</p>
+  <p class="meta">Our full HIPAA Privacy Policy, including internal safeguards and workforce procedures, is available to facility clients on request.</p>
 </div></main>
-<footer><div class="wrap">© 2026 Beloved Minds LLC · <a href="/">Home</a> · <a href="/terms.html">Terms of Service</a> · <a href="/cancellation.html">Cancellation Policy</a></div></footer>
+<footer><div class="wrap">© 2026 Beloved Minds LLC · <a href="/">Home</a> · <a href="/terms.html">Website Terms</a> · <a href="/cancellation.html">Cancellation Policy</a></div></footer>
 </body>
 </html>

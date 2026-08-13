@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beloved Minds — Daily Wellness Calls for Memory Care</title>
-<meta name="description" content="Beloved Minds delivers daily AI-powered wellness phone calls to memory care and assisted living residents — reducing isolation, supporting cognition, and keeping families connected. Built for facilities.">
+<title>Beloved Minds — Daily Connection Calls for Memory Care</title>
+<meta name="description" content="Beloved Minds delivers a daily phone call to every memory care and assisted living resident — easing isolation, engaging the mind, and keeping families connected. Built for facilities.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
@@ -58,17 +58,38 @@
   @media(min-width:641px){.navlinks .btn{display:none}}
 
   /* HERO */
-  header.hero{background:radial-gradient(85% 65% at 18% 8%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 62%),radial-gradient(75% 55% at 84% 16%, color-mix(in srgb,var(--green) 32%,transparent), transparent 58%),linear-gradient(168deg, var(--navy) 0%, var(--navy-deep) 100%);color:#f2ece1;text-align:center;padding:34px 0 56px}
-  header.hero img.logo{width:min(300px,62vw);mix-blend-mode:screen;margin:0 auto 2px;-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 76%);mask-image:radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 76%)}
-  header.hero h1{font-size:clamp(28px,4.4vw,44px);color:#fff;margin:10px auto 14px;max-width:16ch}
-  header.hero p.sub{font-size:clamp(16px,2.2vw,20px);color:#cdd8d7;max-width:50ch;margin:0 auto 30px}
-  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .tagline{margin-top:34px;font-family:var(--serif);font-style:italic;color:var(--gold-lt);font-size:18px;letter-spacing:.02em}
+  header.hero{background:radial-gradient(65% 58% at 26% 26%, color-mix(in srgb,var(--gold) 15%,transparent), transparent 72%),linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-deep) 100%);color:#f2ece1;padding:66px 0 74px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:42px}header.hero{padding:48px 0 56px}}
+  .hero-tag{font-family:var(--serif);font-style:italic;color:var(--gold-lt);font-size:16px;letter-spacing:.02em;margin:0 0 16px}
+  header.hero h1{font-size:clamp(32px,4.4vw,50px);color:#fff;margin:0 0 18px;max-width:24ch;letter-spacing:-.02em}
+  header.hero p.sub{font-size:clamp(16.5px,1.7vw,19px);color:#cfc2da;max-width:52ch;margin:0 0 28px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.13);font-size:13.5px;color:#bcaec9}
+  .hero-trust span{display:flex;align-items:center;gap:7px}
+  .hero-trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none}
+
+  /* HERO — resident care profile card */
+  .callcard{background:var(--paper);color:var(--ink);border-radius:18px;padding:24px;box-shadow:0 26px 64px rgba(0,0,0,.42)}
+  .cc-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:15px}
+  .cc-top b{font-family:var(--serif);font-size:17.5px;font-weight:600}
+  .cc-top span{font-size:12px;color:var(--muted);white-space:nowrap;text-transform:uppercase;letter-spacing:.09em;font-weight:700}
+  .cc-block{padding:15px 0;border-top:1px solid var(--line)}
+  .cc-block .lbl{margin:0 0 10px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.11em;color:var(--gold-deep)}
+  .cc-block .desc{margin:9px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
+  .cc-scale{display:flex;gap:6px}
+  .cc-scale i{flex:1;height:6px;border-radius:3px;background:var(--line)}
+  .cc-scale i.on{background:var(--green-dk)}
+  .cc-opts{display:flex;gap:8px;flex-wrap:wrap}
+  .cc-opts span{font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .cc-opts span.sel{background:color-mix(in srgb,var(--green) 15%,transparent);border-color:color-mix(in srgb,var(--green-dk) 45%,transparent);color:var(--green-dk);font-weight:600}
+  .cc-note{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);text-align:center}
 
   /* STRIP */
-  .strip{background:var(--green-dk);color:#eaf3ee;text-align:center;padding:30px 0}
+  .strip{background:var(--navy-deep);color:#eaf3ee;text-align:center;padding:34px 0 36px;border-top:1px solid color-mix(in srgb,var(--gold) 28%,transparent)}
   .strip p{margin:0;font-family:var(--serif);font-size:clamp(19px,2.6vw,26px);line-height:1.35}
   .strip b{color:var(--gold-lt);font-weight:600}
+  .strip .sub{margin:14px auto 0;max-width:58ch;font-size:clamp(15px,1.7vw,18px);line-height:1.5;color:#bcd2c4}
 
   /* SECTIONS */
   section{padding:74px 0}
@@ -105,6 +126,8 @@
   .feat .dot{flex:none;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-top:2px}
   .feat b{display:block;font-size:16.5px;color:var(--ink)}
   .feat span{color:var(--muted);font-size:15px}
+  .subhead{font-family:var(--serif);font-size:21px;color:var(--green-dk);margin:46px 0 0;font-weight:600}
+  .subhead + .grid{margin-top:20px}
 
   /* MISSION & VISION */
   .mv{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -112,7 +135,9 @@
   @media(max-width:820px){.mvgrid{grid-template-columns:1fr}}
   .mvcard{background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold-deep);border-radius:14px;padding:28px}
   .mvcard h3{font-size:22px;margin:0 0 10px;color:var(--green-dk)}
-  .mvcard p{margin:0;color:#3a4a4d;font-size:15.5px}
+  .mvcard p{margin:0 0 12px;color:#3a4a4d;font-size:15.5px}
+  .mvcard p:last-child{margin-bottom:0}
+  .mvcard p.statement{font-size:19px;line-height:1.36;font-weight:600;color:var(--green-dk);margin-bottom:14px}
 
   /* VALUES */
   .valgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
@@ -124,10 +149,6 @@
 
   /* FACILITIES */
   .facilities{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .statband{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-  .stat{flex:1;min-width:170px;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-  .stat .n{font-family:var(--serif);font-size:30px;color:var(--green-dk);font-weight:600}
-  .stat .l{color:var(--muted);font-size:14px}
 
   /* GIVING */
   .giving{background:var(--green-dk);color:#eaf3ee;text-align:center}
@@ -154,7 +175,8 @@
     font-family:var(--serif);font-size:26px;color:#1a1206;font-weight:600;background:radial-gradient(circle at 50% 35%,var(--gold-lt),var(--gold))}
   .person h3{font-size:20px;margin:0}
   .person .role{color:var(--gold-deep);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin:3px 0 12px}
-  .person p{color:var(--muted);font-size:14.5px;margin:0;text-align:left}
+  .person p{color:var(--muted);font-size:14.5px;margin:0 0 11px;text-align:left}
+  .person p:last-child{margin-bottom:0}
 
   /* CONTACT */
   .contact{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#eef3f2}
@@ -205,21 +227,53 @@
 <!-- HERO -->
 <header class="hero" id="top">
   <div class="wrap">
-    <img class="logo" src="assets/logo-gold.png" alt="Beloved Minds — Connecting Hearts and Minds">
-    <h1>Daily wellness calls for memory care</h1>
-    <p class="sub">A warm, familiar voice that calls every enrolled resident every day — reducing isolation, supporting cognition, and keeping families connected. No app. Just connection.</p>
-    <div class="hero-cta">
-      <a class="btn" href="#contact">Request a Pilot</a>
-      <a class="btn ghost" href="#how">See How It Works</a>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-tag">Connecting Hearts &amp; Minds, One Call At A Time</p>
+        <h1>Dementia takes memory. It doesn't get to take the person.</h1>
+        <p class="sub">Beloved Minds calls every enrolled resident every day — a warm, unhurried voice that knows their whole life, meets them exactly where they are that day, and never makes them feel wrong or small. Every story they tell is kept, and given back to their family.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Request a Pilot</a>
+          <a class="btn ghost" href="#how">See How It Works</a>
+        </div>
+        <div class="hero-trust">
+          <span>30-day free pilot</span>
+          <span>No contract</span>
+          <span>Nothing for your staff to run</span>
+          <span>HIPAA-compliant</span>
+        </div>
+      </div>
+      <div>
+        <!-- EDIT: placeholder profile — replace with a real (permissioned, anonymized) resident
+             profile once Rebecca provides one. Level, confusion mode, and topics below are invented. -->
+        <div class="callcard">
+          <div class="cc-top"><b>Resident care profile</b><span>Set by family</span></div>
+          <div class="cc-block">
+            <p class="lbl">Cognitive Engagement Level</p>
+            <div class="cc-scale"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+            <p class="desc"><b>Level 3</b> — real conversation, with gentle prompts when a word won't come.</p>
+          </div>
+          <div class="cc-block">
+            <p class="lbl">When she's confused</p>
+            <div class="cc-opts"><span class="sel">Agree</span><span>Redirect</span><span>Correct</span></div>
+            <p class="desc">Her daughter's instruction: never correct her. Honored on every call.</p>
+          </div>
+          <div class="cc-block">
+            <p class="lbl">What she'll want to talk about</p>
+            <p class="desc">The bakery she ran · her garden · her brother Danny · Patsy Cline</p>
+          </div>
+          <p class="cc-note">Example profile — every resident is calibrated before the first call.</p>
+        </div>
+      </div>
     </div>
-    <div class="tagline">Connecting Hearts &amp; Minds, One Call At A Time</div>
   </div>
 </header>
 
 <!-- POSITIONING -->
 <div class="strip">
   <div class="wrap">
-    <p>We are not a companionship app. We are not a check-in service.<br><b>We are daily wellness infrastructure.</b></p>
+    <p>We are not a companionship app. We are not a check-in service.<br><b>We are daily engagement infrastructure.</b></p>
+    <p class="sub">Engineered to meet each resident exactly where they are — and to move with them as it changes.</p>
   </div>
 </div>
 
@@ -250,11 +304,11 @@
   <div class="wrap">
     <p class="eyebrow">The solution</p>
     <h2>A warm, familiar voice — every single day</h2>
-    <p class="lede">The resident's phone simply rings, and a voice that knows their name, their stories, and their family is there for a personalized daily conversation. Every call is both a meaningful connection and a quiet wellness check.</p>
+    <p class="lede">The resident's phone simply rings, and a voice that knows their name, their stories, and their family is there for a personalized daily conversation. Every call is both a meaningful connection and a quiet daily observation.</p>
     <div class="grid g3">
       <div class="card"><div class="ic">📞</div><h3>The phone rings</h3><p>Calls reach the resident on familiar phone hardware — no new device to learn, no app, no tablet to lose or break.</p></div>
       <div class="card"><div class="ic">💬</div><h3>A voice that remembers</h3><p>Personalized from details the family provides — names, memories, and the things that bring comfort — so every call feels familiar.</p></div>
-      <div class="card"><div class="ic">🛡️</div><h3>A quiet wellness check</h3><p>Each conversation helps surface changes in mood and engagement, and alerts staff and family promptly if a resident seems in distress.</p></div>
+      <div class="card"><div class="ic">🛡️</div><h3>A quiet daily observation</h3><p>Each conversation helps surface changes in mood and engagement, and alerts staff and family promptly if a resident seems in distress.</p></div>
     </div>
   </div>
 </section>
@@ -279,25 +333,32 @@
   <div class="wrap">
     <p class="eyebrow">Inside the platform</p>
     <h2>Everything a facility needs in one system</h2>
-    <div class="grid g2" style="margin-top:30px">
+    <p class="lede">A daily engagement and observation platform, built exclusively for memory care. Bella calls residents every day, adjusts to where each resident is in their journey, listens for what changes, and preserves what they leave behind. Every capability below is owned by Beloved Minds and protected by a patent pending.</p>
+
+    <p class="subhead">The three that define us</p>
+    <div class="grid g3">
+      <div class="card"><div class="ic">🎚️</div><h3>Cognitive Engagement Level</h3><p>Every resident is calibrated on a five-point scale, set by family or facility. At Level 1, Bella holds a real back-and-forth conversation. At Level 5, she carries it entirely — gentle storytelling and quiet presence for residents far along in their journey. The same platform serves residents at every stage, and adjusts as they move through it.</p></div>
+      <div class="card"><div class="ic">🧭</div><h3>Confusion Response Mode</h3><p>Families choose how Bella responds when a resident is confused: agree, gently redirect, or offer a gentle correction. This is the single most consequential setting in memory care. Families make the call once, and it is honored on every call, every day — no resident is ever argued with or made to feel small.</p></div>
+      <div class="card"><div class="ic">📖</div><h3>Story Cards</h3><p>Not every call produces one. But when a resident shares something that matters — a memory, a moment, something they'd want remembered — it becomes a formatted keepsake families can keep. The stories they tell, captured and preserved, so what they carry is never lost.</p></div>
+    </div>
+
+    <p class="subhead">Also live at launch</p>
+    <div class="grid g2">
       <div>
-        <div class="feat"><span class="dot">✓</span><div><b>Daily personalized companion calls</b><span>A meaningful call to every enrolled resident, every day.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>A purposefully designed wellness voice</b><span>Warmth, tone, and pacing crafted for neurological comfort.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Wellness &amp; engagement insights</b><span>Behavioral and mood signals surfaced to staff over time.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Conversational reality toggle</b><span>Family sets whether Bella redirects, agrees, or plays along when a resident is confused.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Cognition level 1–5</b><span>Family configures conversation style for the disease stage — fully conversational to gentle narrative-only.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Family-Seeded Memories</b><span>Families tell Bella who their loved one is — the stories they've told, the names that still land, the work they were proud of, the songs, the dog, the garden. She carries all of it into every call, and never arrives as a stranger.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Priority Alerts</b><span>The platform notices when a resident moves away from their own normal, and tells someone. Confusion is expected in memory care and is never treated as an alarm — what reaches staff is what actually warrants attention.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Voice Verification</b><span>A passive voice-biometric check confirms the right resident before every call begins.</span></div></div>
       </div>
       <div>
-        <div class="feat"><span class="dot">✓</span><div><b>Automated family notifications</b><span>An update after every call — daily knowledge, not monthly newsletters.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Staff dashboard</b><span>Engagement scores, mood tracking, and wellness flags at a glance.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Voice recognition</b><span>Resident identification and security on every call.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Story card download</b><span>Families can download a beautifully formatted card of a meaningful story shared during a call.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Heirloom Collection</b><span>Every story and meaningful moment a resident has shared, across all their calls, gathered into a single keepsake and delivered to the family — complimentary, after sixty days. Not a summary of calls, but a portrait of a person in their own words.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Daily family updates</b><span>After every call, families receive a synopsis — engagement, topics discussed, and emotional tone. Daily knowledge, not monthly newsletters.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Staff dashboard</b><span>Engagement scores, mood trends, and flagged events at a glance — fully accessible anytime.</span></div></div>
       </div>
     </div>
     <!-- Trust & compliance -->
     <div style="margin-top:34px;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--paper);display:flex;gap:14px;align-items:flex-start">
       <span style="font-size:22px;line-height:1">🔒</span>
-      <p style="margin:0;color:var(--ink)"><b>HIPAA-compliant, built with healthcare-grade security.</b> <span style="color:var(--muted)">Resident conversations and wellness data are encrypted, access-controlled, and handled to healthcare privacy standards.</span></p>
+      <p style="margin:0;color:var(--ink)"><b>HIPAA-compliant, built with healthcare-grade security.</b> <span style="color:var(--muted)">Resident conversations and call data are encrypted, access-controlled, and handled to healthcare privacy standards.</span></p>
     </div>
   </div>
 </section>
@@ -310,11 +371,15 @@
     <div class="mvgrid">
       <div class="mvcard">
         <h3>Our Mission</h3>
-        <p>To ensure that every person living with dementia is heard, valued, and connected — every single day. Because dementia creates distance that even the most devoted families and caregivers can't always bridge alone, we show up daily with a voice purposefully designed to calm, comfort, and engage the mind. Each conversation transforms distance into belonging — while our platform quietly listens for the early signs that something may be changing, giving families meaningful daily connection, the awareness to act before a moment becomes a crisis, and the peace of mind that someone is always listening.</p>
+        <p class="statement">To change what dementia is allowed to take.</p>
+        <p>It will take memory. We understand that. But it does not have to take a person's place in the world, their sense of being known, or the record of who they were. Those are losses the world has simply come to expect — and we don't.</p>
+        <p>Every day, for as long as we're needed.</p>
       </div>
       <div class="mvcard">
         <h3>Our Vision</h3>
-        <p>A world where no person living with dementia goes a single day without a voice that knows their name, remembers their story, and calls them — not because staff had time, but because we built a system that never forgets. Where families stay genuinely connected, not just occasionally informed. Where early awareness replaces late discovery. And where the sound of a familiar, calming voice is recognized as what it truly is — not just comfort, but care.</p>
+        <p>A world where no one with dementia is left alone with what they can no longer hold. Where the details fade and someone is there to fill them in — to tell the story back, to say the names, to remember out loud what a person can no longer remember for themselves.</p>
+        <p>A world where a life keeps growing even as memory recedes. Where the stories that were never told are captured before they're gone, and a family who has been grieving someone still living is given something to hold when the time comes — not a record of decline, but a portrait of a whole person.</p>
+        <p>And a world where the people who do this work every day feel it. Where a facility isn't carrying one more thing, but is prouder of the care they give because of what we bring to it.</p>
       </div>
     </div>
     <!-- TRIBUTE — the women who inspired Beloved Minds. EDIT: captions are editable below. -->
@@ -325,15 +390,15 @@
       <div class="tribgrid">
         <figure class="trib">
           <img src="assets/loretta-williams.jpg" alt="Loretta Williams smiling" loading="lazy">
-          <figcaption><b>Loretta Williams</b><span>Beloved aunt · lived with dementia</span></figcaption>
+          <figcaption><b>Loretta Williams</b><span>Rebecca's beloved aunt · lived with dementia</span></figcaption>
         </figure>
         <figure class="trib">
           <img src="assets/alessandra-la-bruzzo.jpg" alt="Alessandra La Bruzzo smiling at a family gathering" loading="lazy">
-          <figcaption><b>Alessandra La Bruzzo</b><span>David's grandmother · lived with Alzheimer's</span></figcaption>
+          <figcaption><b>Alessandra La Bruzzo</b><span>David's beloved grandmother · lived with Alzheimer's</span></figcaption>
         </figure>
         <figure class="trib">
           <img src="assets/lucile-cameron.jpg" alt="Lucile Cameron smiling" loading="lazy">
-          <figcaption><b>Lucile Cameron</b><span>Beloved grandmother · lived with Alzheimer's</span></figcaption>
+          <figcaption><b>Lucile Cameron</b><span>Rebecca's beloved grandmother · lived with Alzheimer's</span></figcaption>
         </figure>
       </div>
     </div>
@@ -345,19 +410,21 @@
   <div class="wrap center">
     <p class="eyebrow">Our team</p>
     <h2>Led by people who have spent their lives serving others</h2>
-    <p class="lede">Beloved Minds, an Idaho-based company, is led by founders who pair a heart for vulnerable people with the operational discipline to deliver — every day, at scale.</p>
+    <p class="lede">Beloved Minds was not built by people who saw a market and built a product. It was built by people who have spent their lives in service to others — caring for them, advocating for them, keeping them safe, and solving their problems with efficiency, creativity, and genuine love.</p>
     <div class="team2">
       <div class="person">
         <div class="av">RM</div>
         <h3>Rebecca McCallum</h3>
         <div class="role">Co-Founder &amp; CEO</div>
-        <p>Rebecca brings a background in caregiving, health and wellness advocacy, business ownership, and technical support. She is the founder of Peace of Mind — a caregiving, daycare, and home services business — and has spent her career serving vulnerable people with dignity and genuine care.</p>
+        <p>Rebecca is a proven operator and a lifelong caregiver — and Beloved Minds sits exactly where those two things meet. Care work has been the throughline of her life: she began nannying at sixteen, spent more than a decade caring for children, ran her own in-home daycare, and has cared for elderly clients and walked their families through the hardest stretches of the journey. Most recently she was an owner-operator at Tidal Wave Auto Spa, where she entered an industry she knew nothing about and rose to the top of the company — breaking records at her grand opening and leading a high-performing site recognized repeatedly with company accolades.</p>
+        <p>Beloved Minds is personal. Rebecca's grandmother lived with Alzheimer's and her aunt with dementia, and she helped care for both. She knows firsthand the distance the disease creates — and what something like Beloved Minds would have meant. She leads sales, facility relationships, marketing, and strategic direction.</p>
       </div>
       <div class="person">
         <div class="av">DB</div>
         <h3>David Beneduci</h3>
         <div class="role">Co-Founder &amp; COO</div>
-        <p>David brings operational discipline and deep technical experience — from safety supervision at Halliburton and gas systems at Micron Technology to roles spanning AVX Electronic Corporation, restaurant operations, and lead driver and trainer at Carson Oil. He keeps Beloved Minds disciplined, reliable, and built to scale.</p>
+        <p>David is the kind of person who walks into any environment — an oil field, a semiconductor plant, a restaurant kitchen, a logistics operation — and figures out how to make it run better. He started at the ground level at Halliburton and earned a Safety Supervisor role through demonstrated competence and leadership. He deepened his technical expertise in electronic systems at AVX Electronic Corporation, worked as a gas technician at Micron Technology — where precision and safety are not optional — and has successfully operated a restaurant.</p>
+        <p>At Carson Oil he serves as Lead Class A Commercial Driver and Trainer, the person the company trusts to develop the next generation of drivers to the highest standard. He brings that same discipline and quiet generosity to every operational challenge, every facility onboarding, and every technical decision.</p>
       </div>
     </div>
   </div>
@@ -369,11 +436,11 @@
     <p class="eyebrow">Our values</p>
     <h2>What we stand on</h2>
     <div class="valgrid">
-      <div class="val"><h3><span class="num">01</span>Dignity First</h3><p>Every resident deserves to be heard, remembered, and treated as a whole person — regardless of what dementia has taken. Dignity isn't a feature of what we do; it's the foundation everything else is built on.</p></div>
-      <div class="val"><h3><span class="num">02</span>Partnership Over Transaction</h3><p>Facilities aren't our customers and families aren't our users — they're our partners, for the long term. We measure success by the depth of the relationships we build, not the contracts we sign.</p></div>
-      <div class="val"><h3><span class="num">03</span>Intentional by Design</h3><p>Every element is built with purpose — the words our AI chooses, the way it listens, and especially the voice itself, crafted not just to be heard, but to be felt.</p></div>
-      <div class="val"><h3><span class="num">04</span>Honest Outcomes</h3><p>We measure what we do and stand behind the results. We pursue measurable impact, not just meaningful intentions. Our residents deserve proof that the ideas are working.</p></div>
-      <div class="val"><h3><span class="num">05</span>Giving Back Is Built In</h3><p>We begin with 1% of net revenue directed toward causes aligned with our mission — and as Beloved Minds grows, our giving grows substantially with it. This is not a policy. It is a promise.</p></div>
+      <div class="val"><h3><span class="num">01</span>Dignity First</h3><p>Every resident deserves to be heard, remembered, and treated as a whole person regardless of what dementia has taken from them. Every family deserves honesty, respect, and genuine partnership. Dignity is not a feature of what we do. It is the foundation everything else is built on.</p></div>
+      <div class="val"><h3><span class="num">02</span>Partnership Over Transaction</h3><p>Facilities are not our customers. Families are not our users. They are our partners — and we are in this together for the long term. We measure our success by the depth of the relationships we build, not the number of contracts we sign.</p></div>
+      <div class="val"><h3><span class="num">03</span>Intentional by Design</h3><p>Every element of Beloved Minds is built with purpose. The words our AI chooses. The way it listens. And especially the voice itself — crafted not just to be heard, but to be felt. The call does more than carry a conversation: it can ease anxiety, reduce isolation, and bring genuine comfort to a mind that needs it.</p></div>
+      <div class="val"><h3><span class="num">04</span>Honest Outcomes</h3><p>We measure what we do and we stand behind the results. If Beloved Minds is improving lives — we will show it. We pursue measurable impact, not just meaningful intentions. Our residents deserve more than good ideas. They deserve proof that those ideas are working.</p></div>
+      <div class="val"><h3><span class="num">05</span>Giving Back Is Built In</h3><p>We begin with 1% of net profit directed toward causes aligned with our mission and values — and as Beloved Minds grows, our giving grows substantially with it. This is not a policy. It is a promise.</p></div>
     </div>
   </div>
 </section>
@@ -386,13 +453,8 @@
     <p class="lede">Beloved Minds is built for facilities, not consumers. We integrate into the way you already operate — giving directors a clear view of resident wellbeing, reducing the daily load on staff, and giving families a reason to choose and stay with your community.</p>
     <div class="grid g3" style="margin-top:32px">
       <div class="card"><div class="ic">🏥</div><h3>Built for operators</h3><p>Roll out across a building of residents under a single agreement, with onboarding designed around your staff's workflow.</p></div>
-      <div class="card"><div class="ic">📊</div><h3>Visibility that helps</h3><p>A staff dashboard with engagement scores, mood tracking, and wellness flags — and regional views as you grow.</p></div>
+      <div class="card"><div class="ic">📊</div><h3>Visibility that helps</h3><p>A staff dashboard with engagement scores, mood trends, and flagged events — and regional views as you grow.</p></div>
       <div class="card"><div class="ic">🤝</div><h3>Families stay connected</h3><p>Daily notifications keep families reassured and engaged, supporting trust and retention for your community.</p></div>
-    </div>
-    <div class="statband">
-      <div class="stat"><div class="n">30,000+</div><div class="l">U.S. memory care &amp; assisted living facilities</div></div>
-      <div class="stat"><div class="n">~1.5M</div><div class="l">residents who could benefit</div></div>
-      <div class="stat"><div class="n">Every day</div><div class="l">a call, a connection, a quiet check-in</div></div>
     </div>
   </div>
 </section>
@@ -400,10 +462,11 @@
 <!-- GIVING -->
 <section class="giving" id="giving">
   <div class="wrap center">
-    <p class="eyebrow" style="color:var(--gold-lt)">Built on purpose</p>
-    <h2>Care that gives back</h2>
-    <p class="lede">Beloved Minds is a mission before it is a business. From day one we direct a share of net revenue toward causes aligned with our mission and values — a commitment that grows substantially as we do. This is not a policy. It is a promise.</p>
-    <div class="pledge">🤍 &nbsp;Starting at 1% of net revenue — and growing</div>
+    <p class="eyebrow" style="color:var(--gold-lt)">Leaving a legacy</p>
+    <h2>Beloved Hands</h2>
+    <p class="lede">Every elder deserves dignity, connection, and care. Beloved Hands is how we carry that further than our own service can reach. From our first paying facility, 1% of net profit goes to Beloved Hands, our charitable arm — and as Beloved Minds grows, that commitment rises to a permanent 10%.</p>
+    <p class="lede">Where does the support go? To elders who need it, in whatever form need takes. We'd rather say that honestly than promise specifics before we've learned them. We set the number now, at the beginning, when it costs us the most to promise it.</p>
+    <div class="pledge">🤍 &nbsp;1% of net profit — growing to a permanent 10%</div>
   </div>
 </section>
 
@@ -411,7 +474,9 @@
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0">
   <div class="wrap center">
     <p class="eyebrow">Proof, not promises</p>
-    <p style="margin:6px auto 0;max-width:60ch;color:var(--muted);font-size:17px"><b style="color:var(--ink)">Coming soon: pilot results.</b> We're measuring engagement, mood, and family satisfaction across our first pilot communities — and we'll publish what we find here.</p>
+    <!-- EDIT: deliberately vague on the study — academic partner not confirmed. Do NOT name an
+         institution here until an agreement is signed. Tighten this once it's known either way. -->
+    <p style="margin:6px auto 0;max-width:60ch;color:var(--muted);font-size:17px"><b style="color:var(--ink)">Outcomes, measured from the first call.</b> Every pilot is structured as a measurement study, not a trial run — engagement, sentiment, and family response tracked for each resident individually. We are also exploring independent academic review of what we find, and we'll publish the results here.</p>
   </div>
 </section>
 
@@ -423,26 +488,27 @@
         <p class="eyebrow" style="color:var(--gold-lt)">Get in touch</p>
         <h2>Bring Beloved Minds to your residents</h2>
         <p class="lede">We're partnering with a small number of memory care and assisted living facilities for our pilot program. If you'd like to learn more or start a conversation, we'd love to hear from you.</p>
-        <p style="margin-top:18px;color:#c7d3d2">Idaho, USA<br>
+        <p style="margin-top:18px;color:#c7d3d2">Boise, Idaho<br>
+        <a class="mail" href="mailto:support@belovedminds.care">support@belovedminds.care</a><br>
         <a class="mail" href="mailto:Rebeccamccallum@belovedminds.care">Rebeccamccallum@belovedminds.care</a><br>
         <a class="mail" href="mailto:Davidbeneduci@belovedminds.care">Davidbeneduci@belovedminds.care</a><br>
         <a class="mail" href="tel:+12089579985">(208) 957-9985</a></p>
       </div>
       <div>
-        <!-- EDIT: connect this form to your email service (e.g. Resend / Formspree) -->
-        <form action="#" method="post" onsubmit="return false">
+        <!-- Submits by opening the sender's mail client addressed to support@belovedminds.care.
+             EDIT: for true inbox delivery (no mail client needed), swap to Formspree/Resend. -->
+        <form id="pilotform" action="mailto:support@belovedminds.care" method="post" enctype="text/plain">
           <label for="name">Your name</label>
-          <input id="name" name="name" placeholder="Jane Director">
+          <input id="name" name="name" placeholder="Jane Director" required>
           <label for="facility">Facility</label>
           <input id="facility" name="facility" placeholder="Sunrise Memory Care">
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@facility.com">
+          <input id="email" name="email" type="email" placeholder="you@facility.com" required>
           <label for="msg">How can we help?</label>
           <textarea id="msg" name="msg" rows="4" placeholder="Tell us a little about your community…"></textarea>
           <button class="btn" type="submit">Request a Pilot</button>
           <p style="margin:14px 0 0;font-size:14px;color:#c7d3d2">We'll respond within 1 business day to schedule a call.</p>
-          <!-- EDIT: reassurance line — final wording TBD based on pilot terms -->
-          <p style="margin:6px 0 0;font-size:13.5px;color:#9fb2b2">No long-term commitment required — pilot terms are flexible.</p>
+          <p style="margin:6px 0 0;font-size:13.5px;color:#9fb2b2">30-day free pilot — no contract, no payment, no card on file. Month-to-month afterward, cancel with 30 days' written notice.</p>
         </form>
       </div>
     </div>
@@ -453,9 +519,9 @@
 <footer>
   <div class="wrap">
     <div class="fbrand"><img src="assets/logo-dark.png" alt="Beloved Minds"><b>beloved minds</b></div>
-    <div class="small">© 2026 Beloved Minds LLC · Idaho, USA · Connecting Hearts &amp; Minds, One Call At A Time. HIPAA-compliant, built with healthcare-grade security. Beloved Minds provides daily wellness connection and is not a medical or emergency service.</div>
+    <div class="small">© 2026 Beloved Minds LLC · Idaho, USA · Connecting Hearts &amp; Minds, One Call At A Time. HIPAA-compliant, built with healthcare-grade security. Beloved Minds provides daily connection and is not a medical or emergency service.</div>
     <!-- EDIT: replace draft policy text in these pages before launch -->
-    <div class="small" style="width:100%"><a href="/privacy.html" style="color:inherit">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:inherit">Terms of Service</a> &nbsp;·&nbsp; <a href="/cancellation.html" style="color:inherit">Cancellation Policy</a></div>
+    <div class="small" style="width:100%"><a href="/privacy.html" style="color:inherit">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:inherit">Website Terms</a> &nbsp;·&nbsp; <a href="/cancellation.html" style="color:inherit">Cancellation Policy</a></div>
   </div>
 </footer>
 
@@ -470,6 +536,18 @@
   btn.addEventListener('click',function(){setOpen(!nav.classList.contains('open'))});
   nav.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){setOpen(false)})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false)});
+})();
+(function(){
+  var f=document.getElementById('pilotform');
+  if(!f)return;
+  function val(id){var el=document.getElementById(id);return el&&el.value?el.value.trim():''}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var who=val('facility')||val('name')||'Beloved Minds';
+    var body='Name: '+val('name')+'\nFacility: '+val('facility')+'\nEmail: '+val('email')+'\n\n'+val('msg');
+    window.location.href='mailto:support@belovedminds.care?subject='+
+      encodeURIComponent('Pilot request — '+who)+'&body='+encodeURIComponent(body);
+  });
 })();
 </script>
 </body>
