@@ -12,7 +12,7 @@
 <style>
   :root{
     --navy:#3a2150; --navy-deep:#241033; --green:#8a5cb0; --green-dk:#6a3f92;
-    --gold:#d9a441; --gold-lt:#f2dca8; --gold-deep:#8a5a0a; --cream:#f6f1f7; --paper:#fffdfb;
+    --gold:#e8b23e; --gold-lt:#f2dca8; --gold-deep:#8a5a0a; --cream:#f6f1f7; --paper:#fffdfb;
     --ink:#2a1c33; --muted:#6c5d75; --line:#e6dced;
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -58,15 +58,15 @@
   @media(min-width:641px){.navlinks .btn{display:none}}
 
   /* HERO — light band, so it breaks hard from the deep nav above and strip below */
-  header.hero{background:radial-gradient(58% 52% at 20% 16%, color-mix(in srgb,var(--gold) 13%,transparent), transparent 70%),linear-gradient(168deg, color-mix(in srgb,var(--green) 5%,var(--paper)) 0%, color-mix(in srgb,var(--green) 15%,var(--cream)) 100%);color:var(--ink);padding:56px 0 54px}
+  header.hero{background:radial-gradient(58% 52% at 20% 16%, color-mix(in srgb,var(--gold) 13%,transparent), transparent 70%),linear-gradient(168deg, color-mix(in srgb,var(--green) 11%,var(--paper)) 0%, color-mix(in srgb,var(--green) 24%,var(--cream)) 100%);color:var(--ink);padding:56px 0 54px}
   .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}header.hero{padding:46px 0 48px}}
   .hero-tag{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;font-weight:700;color:var(--gold-deep);margin:0 0 14px}
   header.hero h1{font-size:clamp(29px,4.4vw,50px);color:var(--navy-deep);margin:0 0 18px;max-width:24ch;letter-spacing:-.02em}
   header.hero p.sub{font-size:clamp(16px,1.7vw,18.5px);color:var(--muted);max-width:54ch;margin:0 0 28px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  header.hero .btn.ghost{color:var(--gold-deep);border-color:color-mix(in srgb,var(--gold-deep) 42%,transparent)}
-  header.hero .btn.ghost:hover{background:color-mix(in srgb,var(--gold-deep) 9%,transparent);color:var(--navy-deep)}
+  header.hero .btn.ghost{color:var(--navy-deep);border-color:color-mix(in srgb,var(--navy-deep) 34%,transparent)}
+  header.hero .btn.ghost:hover{background:color-mix(in srgb,var(--navy-deep) 7%,transparent);color:var(--navy-deep)}
   .hero-trust{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:26px;padding-top:19px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
   .hero-trust span{display:flex;align-items:center;gap:7px}
   .hero-trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none}

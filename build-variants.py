@@ -30,7 +30,7 @@ THEMES = [
         # reads as gold rather than brown. gold_deep still passes WCAG AA (~5.3:1) on
         # both cream and paper for small text on light bands.
         "vars": dict(navy="3a2150", navy_deep="241033", green="8a5cb0", green_dk="6a3f92",
-                     gold="d9a441", gold_lt="f2dca8", gold_deep="8a5a0a", cream="f6f1f7", paper="fffdfb",
+                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="f6f1f7", paper="fffdfb",
                      ink="2a1c33", muted="6c5d75", line="e6dced"),
         "css": "nav{background:rgba(36,16,51,.96)}.btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
