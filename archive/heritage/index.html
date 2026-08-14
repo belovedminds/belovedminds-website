@@ -73,13 +73,9 @@
   .btn.ghost{background:transparent;color:var(--gold);border-color:var(--gold)}
   .btn.ghost:hover{background:color-mix(in srgb,var(--gold) 12%,transparent);color:var(--gold)}
 
-  /* WHO IT IS FOR — its own band under the hero, so the hero stays two clean columns */
-  .audience{background:var(--paper);border-bottom:1px solid var(--line);padding:26px 0}
-  .hero-audience{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  @media(max-width:820px){.hero-audience{grid-template-columns:1fr;gap:14px}}
-  .hero-audience h3{font-family:var(--sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--green-dk);margin:0 0 5px}
-  .hero-audience p{margin:0;font-size:13px;line-height:1.5;color:var(--muted)}
-  .hero-audience b{color:var(--ink);font-weight:600}
+  /* TAGLINE — a quiet breath between the hero and the positioning statement */
+  .tagband{background:#fff;border-bottom:1px solid var(--line);padding:22px 0;text-align:center}
+  .tagband p{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.2vw,22px);color:var(--green-dk);letter-spacing:.01em}
 
   /* HERO — resident care profile card */
   .callcard{background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 32px 64px rgba(0,0,0,.38)}
@@ -290,23 +286,10 @@
   </div>
 </header>
 
-<!-- WHO IT IS FOR -->
-<section class="audience">
+<!-- TAGLINE -->
+<section class="tagband">
   <div class="wrap">
-    <div class="hero-audience">
-      <div>
-        <h3>For the resident</h3>
-        <p>Someone who knows their whole life, every day — and <b>who keeps going when they can no longer carry the conversation</b>. They laugh. They tell stories. They're known.</p>
-      </div>
-      <div>
-        <h3>For the family</h3>
-        <p>A note after every call, and the stories gathered into an Heirloom Collection — <b>not a record of decline, but a portrait of a whole person</b>.</p>
-      </div>
-      <div>
-        <h3>For your building</h3>
-        <p>Daily engagement and sentiment on every resident, alerts when someone changes from baseline, and <b>a care story you're proud to tell</b>. No training, no setup, nothing added to anyone's day.</p>
-      </div>
-    </div>
+    <p>Connecting Hearts &amp; Minds, One Call At A Time</p>
   </div>
 </section>
 
@@ -323,7 +306,7 @@
   <div class="wrap">
     <p class="eyebrow">What dementia takes</p>
     <h2>Dementia doesn't just take memory. It takes the record of a person.</h2>
-    <p class="big">The names. The work they were proud of. The garden, the songs, the story that ties a life together. As dementia advances, all of it slips away alongside the person — and in a community caring for many, no one can hold a whole lifetime for every resident. <b>Not because anyone falls short.</b> Because a life that large was never meant to rest on memory alone.</p>
+    <p class="big">The names. The work they were proud of. The garden, the songs, the stories that tie a life together. As dementia advances, all of it slips away alongside the person — and in a community caring for many, no one can hold a whole lifetime for every resident. Not because anyone falls short — a life that size was never one person's to carry. And yet those details are the very things that still land for someone living with dementia. <b>Hearing their own life told back to them is one of the few things that reaches through the fog.</b></p>
   </div>
 </section>
 
@@ -374,7 +357,7 @@
   <div class="wrap">
     <p class="eyebrow">What actually happens</p>
     <h2>One call. Everything it sets in motion.</h2>
-    <p class="story">At the same time every day, Bella calls Janet by name. She asks about the year she was crowned rodeo queen, about the secret language her mother invented, about the singing bear at Disneyland whose song the family laughed about for decades — because she knows all of it. Janet laughs. She tells a story she has told before, and it is met as though for the first time. When she can't find a word, Bella waits. When she's confused, Bella agrees, because that is what her daughter asked for.</p>
+    <p class="story">Every day, Bella calls Janet by name. She asks about the year she was crowned rodeo queen, about the secret language her mother invented, about the singing bear at Disneyland whose song the family laughed about for decades — because she knows all of it. Janet laughs. She tells a story she has told before, and it is met as though for the first time. When she can't find a word, Bella waits. When she's confused, Bella agrees, because that is what her daughter asked for.</p>
     <p class="lede">That is one call. Here is what it sets in motion — without anyone on your team lifting a finger.</p>
     <div class="grid g2" style="margin-top:18px">
       <div>
