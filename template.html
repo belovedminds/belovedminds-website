@@ -167,12 +167,12 @@
   /* Cropped to Janet alone; object-position favours the left of the frame. */
   /* Twisted gold cord. Diagonal light/mid/dark bands read as the twist of a rope. */
   .ropetop{position:relative}
-  .ropetop::before{content:"";position:absolute;top:0;left:0;right:0;height:9px;
-    background:repeating-linear-gradient(118deg,
-      color-mix(in srgb,var(--gold) 50%,#fff) 0 3px,
-      var(--gold) 3px 7px,
-      color-mix(in srgb,var(--gold) 58%,#000) 7px 11px);
-    box-shadow:0 1px 3px rgba(0,0,0,.28)}
+  .ropetop::before{content:"";position:absolute;top:0;left:0;right:0;height:14px;
+    background:linear-gradient(90deg,var(--gold-lt),var(--gold) 26%,var(--gold-lt) 50%,var(--gold) 74%,var(--gold-lt));
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='14'%3E%3Cg fill='none' stroke='%23000' stroke-width='4.5' stroke-linecap='round'%3E%3Cpath d='M0 7C6 1 11 1 17 7S28 13 34 7'/%3E%3Cpath d='M0 7C6 13 11 13 17 7S28 1 34 7'/%3E%3C/g%3E%3C/svg%3E");
+    mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='14'%3E%3Cg fill='none' stroke='%23000' stroke-width='4.5' stroke-linecap='round'%3E%3Cpath d='M0 7C6 1 11 1 17 7S28 13 34 7'/%3E%3Cpath d='M0 7C6 13 11 13 17 7S28 1 34 7'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask-repeat:repeat-x;mask-repeat:repeat-x;
+    -webkit-mask-size:auto 14px;mask-size:auto 14px}
 
   /* Transparent PNG — needs no blend, mask or frame on any background. */
   .seal{width:min(74%,230px);display:block;margin:0 auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.22))}
@@ -191,7 +191,7 @@
   .closer b{color:var(--green-dk)}
   .alt .card h3{font-family:var(--serif);font-size:17px;line-height:1.3;margin:0 0 8px;color:var(--green-dk)}
   .why .big{font-family:var(--serif);font-size:clamp(14.5px,1.65vw,16.5px);line-height:1.6;max-width:66ch;color:var(--ink);margin:16px auto 6px}
-  .why .big b{color:color-mix(in srgb,var(--green-dk) 74%,#000);font-weight:600}
+  .why .big b{color:var(--gold-deep);font-weight:600}
 
   /* FEATURES */
   .feat{display:flex;gap:11px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
@@ -231,6 +231,7 @@
   /* GIVING */
   .giving{background:var(--green-dk);color:#eaf3ee;text-align:center}
   .giving h2{color:#fff}.giving .lede{color:#cfe2d6}
+  .pledge .ph{width:17px;height:17px;flex:none;fill:#9c7fbb}
   .pledge{display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.07);border:1px solid color-mix(in srgb,var(--gold-lt) 40%,transparent);border-radius:999px;padding:9px 18px;margin-top:12px;font-family:var(--serif);font-size:15.5px;color:var(--gold-lt)}
 
   /* TRIBUTE */
@@ -634,7 +635,7 @@
     <p class="lede">Every elder deserves dignity, connection, and care. Beloved Hands is how we carry that further than our own service can reach.</p>
     <p class="lede">From our first paying facility, 1% of net profit goes to Beloved Hands, our charitable arm. As Beloved Minds grows, that commitment grows with it — rising, in time, to a permanent 10%.</p>
     <p class="lede">Where does the support go? To elders who need it, in whatever form need takes. We'd rather say that honestly than promise specifics before we've learned them. We set the number now, at the beginning, when it costs us the most to promise it.</p>
-    <div class="pledge">💜 &nbsp;1% of net profit — growing to a permanent 10%</div>
+    <div class="pledge"><svg class="ph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>1% of net profit — growing to a permanent 10%</div>
   </div>
 </section>
 
