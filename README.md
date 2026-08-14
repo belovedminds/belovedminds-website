@@ -206,7 +206,6 @@ Marked in the source with `<!-- EDIT: -->` comments:
 
 - Rebecca McCallum — Rebeccamccallum@belovedminds.care
 - David Beneduci — Davidbeneduci@belovedminds.care
-- (208) 957-9985
 
 ---
 
