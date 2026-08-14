@@ -123,18 +123,22 @@
   /* BANDS — cream carries the page. Bold sage and plum are the anchors. Light plum and
      light sage appear here and there, at real saturation rather than as washes. */
   .b-cream{background:var(--cream)}
-  .b-sage-lt{background:color-mix(in srgb,var(--green) 30%,#fff)}
   .b-sage{background:var(--green-dk);color:#e6f0e9}
-  .b-sage .eyebrow{color:var(--gold)}
-  .b-sage h2,.b-sage h3{color:#fff}
-  .b-sage .lede,.b-sage .story,.b-sage .closer{color:#c9ddd0}
-  .b-sage .closer b{color:var(--gold-lt)}
-  .b-sage .feat{border-bottom-color:rgba(255,255,255,.18)}
-  .b-sage .feat b{color:#fff}
+  .b-plum{background:linear-gradient(166deg,var(--navy) 0%,var(--navy-deep) 100%);color:#e9e0f0}
+  .b-sage .eyebrow,.b-plum .eyebrow{color:var(--gold)}
+  .b-sage h2,.b-sage h3,.b-plum h2,.b-plum h3{color:#fff}
+  .b-sage .lede,.b-sage .story,.b-sage .closer,.b-sage .tribute .lede{color:#c9ddd0}
+  .b-plum .lede,.b-plum .story,.b-plum .closer,.b-plum .tribute .lede{color:#c6b6d4}
+  .b-sage .closer b,.b-plum .closer b{color:var(--gold-lt)}
+  .b-sage .feat,.b-plum .feat{border-bottom-color:rgba(255,255,255,.18)}
+  .b-sage .feat b,.b-plum .feat b{color:#fff}
   .b-sage .feat span{color:#c9ddd0}
-  .b-sage .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
-  .b-sage .card h3{color:#fff}
+  .b-plum .feat span{color:#c6b6d4}
+  .b-sage .card,.b-plum .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+  .b-sage .card h3,.b-plum .card h3{color:#fff}
   .b-sage .card p{color:#c9ddd0}
+  .b-plum .card p{color:#c6b6d4}
+  .b-sage .mvcard,.b-plum .mvcard,.b-sage .trib,.b-plum .trib{border-color:rgba(255,255,255,.22)}
   .alt{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
   /* IMAGERY */
@@ -327,7 +331,7 @@
 </section>
 
 <!-- POSITIONING -->
-<div class="strip">
+<div class="strip b-plum">
   <div class="wrap">
     <p>We are not a companionship app. We are not a check-in service.<br><b>We are daily wellness infrastructure.</b></p>
     <p class="sub">Engineered to meet each resident exactly where they are — and to move with them as it changes.</p>
@@ -361,7 +365,7 @@
 </section>
 
 <!-- 5. THE OBJECTIONS -->
-<section class="alt">
+<section class="b-cream">
   <div class="wrap">
     <p class="eyebrow">The questions directors ask</p>
     <h2>Fair questions, answered plainly</h2>
@@ -383,7 +387,7 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" class="b-sage-lt">
+<section id="how" class="b-plum">
   <div class="wrap">
     <p class="eyebrow">What actually happens</p>
     <h2>One call. Everything it sets in motion.</h2>
@@ -392,19 +396,19 @@
     <div class="grid g2" style="margin-top:18px">
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>Her daughter hears how she is — today</b><span>A synopsis after every call: what they talked about, how engaged she was, how she seemed. Not a monthly newsletter. The same day.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>A moment worth keeping becomes a Story Card</b><span>Not every call produces one. But when Janet shares something that matters, it becomes a formatted keepsake her family can hold — and after sixty days those gather into the Heirloom Collection: her whole life, given back to them.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>A moment worth keeping becomes a Story Card</b><span>Not every call produces one. But when Janet shares something that matters, it becomes a formatted keepsake her family can hold. And when her service comes to an end, everything she has shared is gathered into the Heirloom Collection — her whole life, given back to them.</span></div></div>
       </div>
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>Your team sees her against her own baseline</b><span>Engagement, duration and sentiment measured against Janet's normal — never against other residents. When she drifts from it, you're told. Confusion on its own is expected, and is never treated as an alarm.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>The touchpoint is documented</b><span>Every call logged on its own line, with any alert and the action taken — evidence you can take to a family, to your corporate office, or to a state surveyor.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>The touchpoint is documented</b><span>Every call logged on its own line, with any alert and the action taken — a record you can take to a family or to your corporate office.</span></div></div>
       </div>
     </div>
-    <p class="closer">And tomorrow it happens again — <b>picking up exactly where this one left off.</b></p>
+    <p class="closer">And tomorrow it happens again — <b>picking up where this one left off.</b></p>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section class="alt">
+<section class="b-cream">
   <div class="wrap">
     <p class="eyebrow">How it's built</p>
     <h2>Every choice here is a memory-care decision</h2>
@@ -425,7 +429,7 @@
         <div class="feat"><span class="dot">✓</span><div><b>Voice Verification</b><span>A passive voice-biometric check confirms the right resident before every call begins.</span></div></div>
       </div>
       <div>
-        <div class="feat"><span class="dot">✓</span><div><b>Heirloom Collection</b><span>Every story and meaningful moment a resident has shared, across all their calls, gathered into a single keepsake and delivered to the family — complimentary, after sixty days. Not a summary of calls, but a portrait of a person in their own words.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Heirloom Collection</b><span>Every story and meaningful moment a resident has shared, across all their calls, gathered into a single keepsake and delivered to the family when their service comes to an end — complimentary, for any resident who has completed sixty days or more. Not a summary of calls, but a portrait of a person in their own words.</span></div></div>
         <div class="feat"><span class="dot">✓</span><div><b>Daily family updates</b><span>After every call, families receive a synopsis — engagement, topics discussed, and emotional tone. Daily knowledge, not monthly newsletters.</span></div></div>
         <div class="feat"><span class="dot">✓</span><div><b>Staff dashboard</b><span>Engagement scores, mood trends, and flagged events at a glance — fully accessible anytime.</span></div></div>
       </div>
@@ -506,7 +510,7 @@
 </section>
 
 <!-- VALUES -->
-<section class="b-sage-lt">
+<section class="b-plum">
   <div class="wrap">
     <p class="eyebrow">Our values</p>
     <h2>What we stand on</h2>
@@ -545,7 +549,7 @@
       </div>
     </div>
     <div style="margin-top:24px;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--cream)">
-      <p style="margin:0;color:var(--ink)"><b>We never average sentiment across residents.</b> <span style="color:var(--muted)">A building-wide mood score would be meaningless. Every resident is measured only against themselves, over time — so what you take to a family, to your corporate office, or to a state surveyor is a number that actually holds up.</span></p>
+      <p style="margin:0;color:var(--ink)"><b>We never average sentiment across residents.</b> <span style="color:var(--muted)">A building-wide mood score would be meaningless. Every resident is measured only against themselves, over time — so what you take to a family or to your corporate office is a number that actually holds up.</span></p>
     </div>
   </div>
 </section>
@@ -553,7 +557,7 @@
 <!-- FAMILIES -->
 <!-- NOTE: families are routed to their loved one's community, because Beloved Minds is sold
      to facilities. When the B2C offering launches, this section becomes the direct door. -->
-<section id="families" class="b-sage-lt">
+<section id="families" class="b-plum">
   <div class="wrap">
     <p class="eyebrow">For families</p>
     <h2>You'll know how today went — every day</h2>
