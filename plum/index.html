@@ -250,10 +250,12 @@
      so the artwork dissolves into the plum instead of showing a card outline. */
   /* Cropped to the mark alone — the wordmark sits beside it in text, so the version baked
      into the file was a duplicate. object-fit crops without leaving dead space. */
-  footer .fbrand img{width:132px;height:57px;object-fit:cover;object-position:50% 0%;
-    mix-blend-mode:screen;filter:contrast(1.5) brightness(1.05);
-    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 92%,transparent 100%);
-    mask-image:linear-gradient(to bottom,#000 0%,#000 92%,transparent 100%)}
+  /* The beacon art is a circular badge on a navy field with a caption beneath. Clipping to a
+     circle drops both the field and the caption -- no blend, filter or fade needed. */
+  footer .fmark{position:relative;flex:none;display:block;width:66px;height:66px;
+    border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
+  footer .fmark img{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);
+    width:183%;max-width:none;display:block}
   footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:17px}
   footer .small{opacity:.8;max-width:50ch}
 
@@ -649,7 +651,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="fbrand"><img src="../assets/logo-dark.png" alt="Beloved Minds"><b>beloved minds</b></div>
+    <div class="fbrand"><span class="fmark"><img src="../assets/beacon.jpg" alt=""></span><b>beloved minds</b></div>
     <div class="small">© 2026 Beloved Minds LLC · Idaho, USA · Connecting Hearts &amp; Minds, One Call At A Time. HIPAA-compliant, built with healthcare-grade security. Beloved Minds provides daily connection and is not a medical or emergency service.</div>
     <!-- EDIT: replace draft policy text in these pages before launch -->
     <div class="small" style="width:100%"><a href="/privacy.html" style="color:inherit">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:inherit">Website Terms</a> &nbsp;·&nbsp; <a href="/cancellation.html" style="color:inherit">Cancellation Policy</a></div>
