@@ -32,7 +32,7 @@ THEMES = [
         "vars": dict(navy="3a2150", navy_deep="241033", green="8a5cb0", green_dk="6a3f92",
                      gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="f6f1f7", paper="fffdfb",
                      ink="2a1c33", muted="6c5d75", line="e6dced"),
-        "css": "nav{background:rgba(36,16,51,.96)}.btn{border-radius:999px}.card{border-radius:18px}"
+        "css": ".btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
     },
     {
@@ -42,8 +42,7 @@ THEMES = [
         "vars": dict(navy="1f3a5c", navy_deep="122438", green="2f8296", green_dk="1f6274",
                      gold="cda24a", gold_lt="ecd49a", gold_deep="7a5f18", cream="f3f6f9", paper="ffffff",
                      ink="16283b", muted="566778", line="dde5ec"),
-        "css": "nav{background:rgba(18,36,56,.96)}.card{border-radius:12px}.btn{border-radius:6px}"
-               "header.hero{padding:60px 0 84px}",
+        "css": ".card{border-radius:12px}.btn{border-radius:6px}",
     },
     {
         "slug": "clay",
@@ -52,7 +51,7 @@ THEMES = [
         "vars": dict(navy="6b3b2e", navy_deep="47241b", green="6e7d3f", green_dk="55632f",
                      gold="c8743f", gold_lt="e6a368", gold_deep="9a4f22", cream="f7efe4", paper="fffdf8",
                      ink="33271f", muted="6e5f52", line="ecdfcf"),
-        "css": "nav{background:rgba(71,36,27,.96)}.btn{border-radius:999px}.card{border-radius:16px}"
+        "css": ".btn{border-radius:999px}.card{border-radius:16px}"
                ".eyebrow{letter-spacing:.2em}h1,h2,h3{letter-spacing:-.015em}",
     },
 ]
