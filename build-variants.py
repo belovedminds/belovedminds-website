@@ -34,8 +34,8 @@ THEMES = [
         # in the logo mark. green_dk passes WCAG AA (~5.9:1) on paper for small text.
         # cream shifted off lilac to a warm sage-grey so light bands read apart from paper.
         "vars": dict(navy="3a2150", navy_deep="241033", green="7d9573", green_dk="4e6a48",
-                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="eef1ea", paper="fffdfb",
-                     ink="2a1c33", muted="6c5d75", line="e1e7db"),
+                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="e2e9da", paper="f5f8f2",
+                     ink="2a1c33", muted="6c5d75", line="cfdac6"),
         "css": ".btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
     },
