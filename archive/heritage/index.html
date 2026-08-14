@@ -142,8 +142,12 @@
   @media(max-width:820px){.splitgrid{grid-template-columns:1fr;gap:28px}}
   .treecard{background:#fff;border-radius:20px;padding:16px;box-shadow:0 20px 46px rgba(0,0,0,.3)}
   .treecard img{width:100%;display:block;border-radius:12px}
-  /* Logo files are artwork on solid black; screen blend drops the black on dark bands. */
-  .givemark{display:block;width:min(280px,64%);margin:0 auto 6px;mix-blend-mode:screen}
+  /* The lockup is artwork on near-black. Screen blend drops most of it, clip-path cuts the
+     baked-in tagline, and the radial mask feathers the edges so no card outline remains. */
+  .givemark{display:block;width:min(300px,68%);margin:0 auto 2px;mix-blend-mode:screen;
+    clip-path:inset(0 0 23% 0);
+    -webkit-mask-image:radial-gradient(ellipse 78% 74% at 50% 40%, #000 52%, transparent 84%);
+    mask-image:radial-gradient(ellipse 78% 74% at 50% 40%, #000 52%, transparent 84%)}
   .story{font-family:var(--serif);font-size:clamp(15.5px,1.75vw,18px);line-height:1.65;color:var(--ink);max-width:66ch;margin:0 0 14px}
   .closer{font-family:var(--serif);font-size:clamp(16px,1.9vw,19px);line-height:1.5;color:var(--ink);margin:22px 0 0;max-width:52ch}
   .closer b{color:var(--green-dk)}
