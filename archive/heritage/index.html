@@ -35,11 +35,9 @@
   .navright{display:flex;align-items:center;gap:18px}
   .navlinks a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500;opacity:.85}
   .navlinks a:hover{opacity:1;color:var(--navy-deep)}
-  /* On the cream bar the champagne button would vanish, so the nav CTA inverts to plum. */
-  nav .btn{background:var(--navy-deep);color:var(--gold-lt);border-color:var(--navy-deep)}
-  nav .btn:hover{background:var(--navy);border-color:var(--navy);color:#fff}
-  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);text-decoration:none;font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:8px;border:1px solid var(--gold);transition:.15s}
-  .btn:hover{background:var(--gold-lt);border-color:var(--gold-lt);color:var(--navy-deep)}
+  /* Flat yellow reads as mustard; a light-to-gold sheen reads as metal. */
+  .btn{display:inline-block;background:linear-gradient(168deg,color-mix(in srgb,var(--gold) 45%,#fff) 0%,var(--gold) 62%,color-mix(in srgb,var(--gold) 90%,#b8862f) 100%);color:var(--navy-deep);text-decoration:none;font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:8px;border:1px solid color-mix(in srgb,var(--gold) 82%,#b8862f);transition:.15s}
+  .btn:hover{background:linear-gradient(168deg,#fff 0%,var(--gold-lt) 70%,var(--gold) 100%);color:var(--navy-deep)}
   .btn.ghost{background:transparent;color:var(--gold-lt);border-color:color-mix(in srgb,var(--gold-lt) 50%,transparent)}
   .btn.ghost:hover{background:color-mix(in srgb,var(--gold-lt) 10%,transparent);color:#fff}
 
@@ -78,7 +76,7 @@
   .btn.ghost:hover{background:color-mix(in srgb,var(--gold) 12%,transparent);color:var(--gold)}
 
   /* TAGLINE — a quiet breath between the hero and the positioning statement */
-  .tagband{background:#fff;border-bottom:1px solid var(--line);padding:22px 0;text-align:center}
+  .tagband{background:var(--cream);border-bottom:1px solid var(--line);padding:22px 0;text-align:center}
   .tagband p{margin:0;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(19px,2.5vw,25px);color:var(--navy-deep);letter-spacing:.01em}
 
   /* HERO — resident care profile card */
@@ -125,7 +123,6 @@
   /* BANDS — cream carries the page. Bold sage and plum are the anchors. Light plum and
      light sage appear here and there, at real saturation rather than as washes. */
   .b-cream{background:var(--cream)}
-  .b-plum-lt{background:color-mix(in srgb,var(--navy) 26%,#fff)}
   .b-sage-lt{background:color-mix(in srgb,var(--green) 30%,#fff)}
   .b-sage{background:var(--green-dk);color:#e6f0e9}
   .b-sage .eyebrow{color:var(--gold)}
@@ -429,7 +426,7 @@
 </section>
 
 <!-- MISSION & VISION -->
-<section class="mv b-plum-lt" id="mission">
+<section class="mv" id="mission">
   <div class="wrap">
     <p class="eyebrow">Mission &amp; vision</p>
     <h2>Why we exist</h2>
@@ -543,7 +540,7 @@
 <!-- FAMILIES -->
 <!-- NOTE: families are routed to their loved one's community, because Beloved Minds is sold
      to facilities. When the B2C offering launches, this section becomes the direct door. -->
-<section id="families" class="b-plum-lt">
+<section id="families">
   <div class="wrap">
     <p class="eyebrow">For families</p>
     <h2>You'll know how today went — every day</h2>
