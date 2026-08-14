@@ -18,49 +18,51 @@
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:104px}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;letter-spacing:-.01em}
   a{color:inherit}
 
   /* NAV */
-  /* Transparent over the hero, solid once scrolled — so there is no second colour band. */
-  nav{position:sticky;top:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .25s ease,border-color .25s ease}
-  nav.scrolled,nav.open{background:color-mix(in srgb,var(--navy-deep) 95%,transparent);backdrop-filter:blur(10px);border-bottom-color:color-mix(in srgb,var(--gold) 22%,transparent)}
-  nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:88px}
-  .brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-  .brand img{height:64px;display:block;mix-blend-mode:screen}
+  /* Light bar — its own surface, and the white-background logo sits on it with no chip needed. */
+  nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);transition:box-shadow .25s ease}
+  nav.scrolled{box-shadow:0 8px 24px rgba(26,16,36,.13)}
+  nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:76px}
+  .brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0}
+  .brand img{height:52px;width:auto;display:block}
+  .brand span{font-family:var(--serif);font-size:29px;color:var(--navy-deep);letter-spacing:.02em;line-height:1}
   .navright{display:flex;align-items:center;gap:18px}
-  .navlinks a{color:#d8e0e0;text-decoration:none;font-size:14.5px;font-weight:500;opacity:.9}
-  .navlinks a:hover{opacity:1;color:#fff}
+  .navlinks a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500;opacity:.85}
+  .navlinks a:hover{opacity:1;color:var(--navy-deep)}
   .btn{display:inline-block;background:var(--gold);color:#1a1206;text-decoration:none;font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:8px;border:1px solid var(--gold);transition:.15s}
   .btn:hover{background:var(--gold-lt);border-color:var(--gold-lt)}
   .btn.ghost{background:transparent;color:var(--gold-lt);border-color:color-mix(in srgb,var(--gold-lt) 50%,transparent)}
   .btn.ghost:hover{background:color-mix(in srgb,var(--gold-lt) 10%,transparent);color:#fff}
 
   /* MENU (hamburger at all sizes) */
-  .menu-btn{display:block;background:none;border:0;padding:10px;margin:-10px -6px -10px 0;cursor:pointer;color:var(--gold-lt)}
+  .menu-btn{display:block;background:none;border:0;padding:10px;margin:-10px -6px -10px 0;cursor:pointer;color:var(--navy-deep)}
   .menu-btn svg{display:block}
   .menu-btn .icon-close{display:none}
   nav.open .menu-btn .icon-open{display:none}
   nav.open .menu-btn .icon-close{display:block}
-  .navlinks{display:none;position:absolute;top:100%;right:24px;flex-direction:column;align-items:stretch;gap:0;min-width:280px;background:var(--navy-deep);border:1px solid color-mix(in srgb,var(--gold) 25%,transparent);border-top:none;border-radius:0 0 14px 14px;box-shadow:0 18px 30px rgba(0,0,0,.35);overflow:hidden}
+  .navlinks{display:none;position:absolute;top:100%;right:24px;flex-direction:column;align-items:stretch;gap:0;min-width:280px;background:var(--paper);border:1px solid var(--line);border-top:none;border-radius:0 0 14px 14px;box-shadow:0 18px 30px rgba(26,16,36,.18);overflow:hidden}
   nav.open .navlinks{display:flex}
-  .navlinks a:not(.btn){padding:15px 24px;font-size:16px;opacity:1;border-top:1px solid rgba(255,255,255,.08)}
+  .navlinks a:not(.btn){padding:15px 24px;font-size:16px;opacity:1;border-top:1px solid var(--line)}
   .navlinks a:not(.btn):first-child{border-top:none}
   .navlinks .btn{margin:14px 24px 20px;text-align:center}
   @media(max-width:860px){
     .navlinks{left:0;right:0;min-width:0;border-radius:0;border-left:none;border-right:none}
-    .brand img{height:50px}
+    .brand img{height:40px}
+    .brand span{font-size:22px}
   }
   @media(max-width:640px){.nav-cta{display:none}}
   @media(min-width:641px){.navlinks .btn{display:none}}
 
   /* HERO — one solid plum field, nav sitting on top of it. No gradient, no second band. */
-  header.hero{background:var(--navy-deep);color:#e8dff0;padding:104px 0 82px}
+  header.hero{background:var(--navy-deep);color:#e8dff0;padding:58px 0 74px}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}header.hero{padding:84px 0 52px}}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}header.hero{padding:42px 0 48px}}
   .hero-tag{font-family:var(--sans);text-transform:uppercase;letter-spacing:.19em;font-size:11.5px;font-weight:700;color:var(--gold);margin:0 0 18px}
   header.hero h1{font-family:var(--serif);font-size:clamp(36px,5.1vw,60px);line-height:1.06;color:#fdf6ec;margin:0 0 22px;max-width:15ch;letter-spacing:-.022em}
   header.hero p.sub{font-family:var(--sans);font-size:clamp(15.5px,1.5vw,17.5px);line-height:1.6;color:#bdaacd;max-width:50ch;margin:0 0 30px}
@@ -119,6 +121,9 @@
   /* WHY band */
   .why{background:var(--cream)}
   .alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .closer{font-family:var(--serif);font-size:clamp(16px,1.9vw,19px);line-height:1.5;color:var(--ink);margin:22px 0 0;max-width:52ch}
+  .closer b{color:var(--green-dk)}
+  .alt .card h3{font-family:var(--serif);font-size:17px;line-height:1.3;margin:0 0 8px;color:var(--green-dk)}
   .why .big{font-family:var(--serif);font-size:clamp(14.5px,1.65vw,16.5px);line-height:1.6;max-width:66ch;color:var(--ink);margin:16px auto 6px}
   .why .big b{color:var(--green-dk);font-weight:600}
 
@@ -218,10 +223,10 @@
 <!-- NAV -->
 <nav id="sitenav">
   <div class="wrap">
-    <!-- logo-dark.png is the full lockup (mark + wordmark + tagline) on black. It carries its
-         own wordmark, so no text is set beside it. mix-blend-mode drops the black on the dark hero.
-         EDIT: swap for a transparent mark-only export when one exists. -->
-    <a class="brand" href="#top"><img src="../../assets/logo-dark.png" alt="Beloved Minds — Connecting Hearts and Minds, One Call At A Time"></a>
+    <!-- logo-color.png is the mark alone (tree + dove) but on a white background, so it is set in
+         a white chip to make that deliberate. EDIT: with a transparent PNG/SVG of the mark, drop
+         the chip background and padding and it sits directly on the bar. -->
+    <a class="brand" href="#top"><img src="../../assets/logo-color.png" alt=""><span>beloved minds</span></a>
     <div class="navright">
       <a class="btn nav-cta" href="#contact">Request a Pilot</a>
       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
@@ -298,7 +303,7 @@
       </div>
       <div>
         <h3>For your building</h3>
-        <p>Daily engagement and sentiment on every resident, alerts when someone changes from baseline, and <b>a care story you're proud to tell</b>. Nothing for your team to run.</p>
+        <p>Daily engagement and sentiment on every resident, alerts when someone changes from baseline, and <b>a care story you're proud to tell</b>. No training, no setup, nothing added to anyone's day.</p>
       </div>
     </div>
   </div>
@@ -326,22 +331,40 @@
   <div class="wrap">
     <p class="eyebrow">Beyond what anyone can hold</p>
     <h2>The gap isn't devotion. It's reach.</h2>
-    <p class="lede">Families pour themselves in. Caregivers give everything they have. The gaps that remain aren't gaps in effort — they're gaps in reach, the kind no amount of love can close alone. That's the gap Beloved Minds was built for.</p>
-    <div class="grid g3">
-      <div class="card"><div class="ic">⏱️</div><h3>One-to-one time doesn't scale</h3><p>No team, however devoted, can sit with every resident every day and pick up where the last conversation left off. A whole life history, held across shifts and turnover, is beyond what any person can carry.</p></div>
-      <div class="card"><div class="ic">🤍</div><h3>Isolation compounds it</h3><p>Days without real conversation leave a resident further from the people who love them, and further from their own story — the thing that still reaches them when little else does.</p></div>
-      <div class="card"><div class="ic">📉</div><h3>Slow change is invisible</h3><p>A resident drifting from their own normal does it gradually, across weeks. Without a daily point of contact and a baseline to measure against, there is nothing to notice it against.</p></div>
-    </div>
+    <p class="lede">Families pour themselves in. Caregivers give everything they have. The gaps that remain aren't gaps in effort — they're gaps in reach, the kind no amount of devotion can close alone. That is where Beloved Minds begins.</p>
   </div>
 </section>
 
-<!-- 4. WHAT BELOVED MINDS DOES -->
+<!-- 4. WHAT BELOVED MINDS GIVES BACK -->
 <section class="whatwedo">
   <div class="wrap">
-    <p class="eyebrow">What we do</p>
-    <h2>The conversation never starts over.</h2>
-    <p class="lede">Every day, a warm and unhurried voice calls each resident and asks about their life — as someone who knows it. It meets them where they are that day, follows the family's wishes when they're confused, and never rushes. It keeps going even when a resident can no longer carry the conversation themselves.</p>
-    <p class="lede">And every story they tell is kept — told back to the resident who can no longer tell it, and shared with the family. <b>Nothing is lost. It grows.</b></p>
+    <p class="eyebrow">What we give back</p>
+    <h2>Dementia works by taking things away. Beloved Minds gives them back.</h2>
+    <p class="lede">And it makes the community where a resident lives the place that actively pushes against what dementia is doing, every single day.</p>
+    <p class="lede">Bella calls each resident by name, every day. The conversation carries itself when a resident cannot fully partake. Families decide how confusion is met, and at what level their loved one is engaged. Keepsakes are captured with the foresight of what may be lost — but needs to be kept.</p>
+    <p class="closer">Every other platform in this space delivers a feature. A call. A check-in. A notification.<br><b>This is something else entirely.</b></p>
+  </div>
+</section>
+
+<!-- 5. THE OBJECTIONS -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">The questions directors ask</p>
+    <h2>Fair questions, answered plainly</h2>
+    <div class="grid g3">
+      <div class="card">
+        <h3>“Couldn't our own team do this?”</h3>
+        <p>Your team already does the part that matters most — the care, the presence, the knowing. What no one can do is sit with every resident, every day, and pick up each conversation where it left off. Every resident is a whole life history, held across shifts and turnover. That isn't a shortcoming of any team. It's beyond what any person can hold. Bella holds it, and what she learns sits underneath the care your staff gives, not against it.</p>
+      </div>
+      <div class="card">
+        <h3>“How is this different from a check-in service?”</h3>
+        <p>A check-in call asks a yes-or-no question and logs the answer. For a resident with dementia, that's often a call they can't complete and won't remember. Beloved Minds is built for dementia and Alzheimer's alone — every call tailored to the individual, their history, their level, their family's wishes. No check-in service lets a family decide how confusion is handled. None captures a resident's history. Ours does both. The conversation is the point. The data comes out of it.</p>
+      </div>
+      <div class="card">
+        <h3>“Isn't this just an AI voice assistant?”</h3>
+        <p>General-purpose AI is built for people who can keep up with it — ask, answer, move on. Point that at a resident who needs a moment to find a word and it fails. Every meaningful choice here is a memory-care decision: Cognitive Engagement Level, Confusion Response Mode, and the choice to remember, so nothing starts over.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -540,7 +563,7 @@
       </div>
     </div>
     <div style="margin-top:34px;padding:22px 24px;border:1px solid var(--line);border-radius:14px;background:var(--paper)">
-      <p style="margin:0;color:var(--ink)"><b>How families get Beloved Minds.</b> <span style="color:var(--muted)">We work through your loved one's community rather than selling to families directly, so their care team and their calls stay connected. If you'd like them to have it, mention us to the director or administrator where they live.</span></p>
+      <p style="margin:0;color:var(--ink)"><b>Coming soon for families.</b> <span style="color:var(--muted)">Beloved Minds is available today through memory care and assisted living communities, and we're opening it directly to families soon. If your loved one is already in a community, mention us to their director — we'll take it from there.</span></p>
     </div>
   </div>
 </section>
