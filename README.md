@@ -168,7 +168,7 @@ though it now mirrors the live site.
 
 The live page is a single scrolling document. In-page anchors:
 
-`#top` · `#how` · `#mission` · `#facilities` · `#giving` · `#team` · `#contact`
+`#top` · `#mission` · `#how` · `#facilities` · `#families` · `#values` · `#giving` · `#team` · `#contact`
 
 ## Open items
 

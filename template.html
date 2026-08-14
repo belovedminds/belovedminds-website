@@ -302,10 +302,13 @@
   /* The beacon art is a circular badge on a navy field with a caption beneath. Clipping to a
      circle drops both the field and the caption -- no blend, filter or fade needed. */
   /* Zoomed inside the badge so the lighthouse fills the frame — no gold ring, no navy field. */
-  footer .fmark{position:relative;flex:none;display:block;width:66px;height:66px;
-    border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 38%,transparent)}
-  footer .fmark img{position:absolute;left:50%;top:64%;transform:translate(-50%,-50%);
-    width:256%;max-width:none;display:block}
+  /* Cropped to the lighthouse alone: a tall, narrow window inside the badge. The
+     frame has to be this narrow — anything wider catches the badge rim at the
+     spire, where the circle is at its tightest. */
+  footer .fmark{position:relative;flex:none;display:block;width:31px;height:66px;
+    border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 38%,transparent)}
+  footer .fmark img{position:absolute;left:50%;top:63%;transform:translate(-50%,-50%);
+    width:441%;max-width:none;display:block}
   footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:13.5px}
   footer .small{opacity:.8;max-width:50ch}
 </style>
@@ -331,6 +334,8 @@
       <a href="#how">How It Works</a>
       <a href="#facilities">For Facilities</a>
       <a href="#families">For Families</a>
+      <a href="#values">Our Values</a>
+      <a href="#giving">Beloved Hands</a>
       <a href="#team">Our Team</a>
       <a class="btn" href="#contact">Request a Pilot</a>
     </div>
@@ -580,7 +585,7 @@
 </section>
 
 <!-- VALUES -->
-<section class="b-sage">
+<section class="b-sage" id="values">
   <div class="wrap">
     <p class="eyebrow">Our values</p>
     <h2>What we stand on</h2>
