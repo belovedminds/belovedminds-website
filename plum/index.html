@@ -161,6 +161,15 @@
   .disc img{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:none;display:block}
   .disc.doves{width:min(310px,82%)}
   /* Cropped to Janet alone; object-position favours the left of the frame. */
+  /* Twisted gold cord. Diagonal light/mid/dark bands read as the twist of a rope. */
+  .ropetop{position:relative}
+  .ropetop::before{content:"";position:absolute;top:0;left:0;right:0;height:9px;
+    background:repeating-linear-gradient(118deg,
+      color-mix(in srgb,var(--gold) 50%,#fff) 0 3px,
+      var(--gold) 3px 7px,
+      color-mix(in srgb,var(--gold) 58%,#000) 7px 11px);
+    box-shadow:0 1px 3px rgba(0,0,0,.28)}
+
   /* Transparent PNG — needs no blend, mask or frame on any background. */
   .seal{width:min(74%,230px);display:block;margin:0 auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.22))}
   .photo{width:min(70%,320px);display:block;margin:0 auto;
@@ -616,7 +625,7 @@
 </section>
 
 <!-- GIVING -->
-<section class="giving" id="giving">
+<section class="giving ropetop" id="giving">
   <div class="wrap center">
     <img class="givemark" src="../assets/logo-gold.png" alt="">
     <p class="eyebrow" style="color:var(--gold-lt)">Leaving a legacy</p>
