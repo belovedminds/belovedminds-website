@@ -40,7 +40,7 @@ THEMES = [
         # forest green as the bold blocks, warm cream / light plum / light sage as the
         # light ones. Colour comes from saturated blocks, never from tinting a whole page.
         "vars": dict(navy="3a2150", navy_deep="241033", green="4a8163", green_dk="2f6b4f",
-                     gold="f2c85f", gold_lt="f8e3ae", gold_deep="8a5a0a", cream="f7f2e8", paper="ffffff",
+                     gold="f9d46b", gold_lt="fbebbc", gold_deep="8a5a0a", cream="f7f2e8", paper="ffffff",
                      ink="2a1c33", muted="574a60", line="e7ded0"),
         "css": ".btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
