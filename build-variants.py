@@ -29,9 +29,13 @@ THEMES = [
         # gold brightened out of mustard: same ~38° hue, higher value + saturation so it
         # reads as gold rather than brown. gold_deep still passes WCAG AA (~5.3:1) on
         # both cream and paper for small text on light bands.
-        "vars": dict(navy="3a2150", navy_deep="241033", green="8a5cb0", green_dk="6a3f92",
-                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="f6f1f7", paper="fffdfb",
-                     ink="2a1c33", muted="6c5d75", line="e6dced"),
+        # The green slots used to hold more purple, leaving the page one hue plus gold.
+        # They now hold a muted sage — warm rather than clinical, and drawn from the leaves
+        # in the logo mark. green_dk passes WCAG AA (~5.9:1) on paper for small text.
+        # cream shifted off lilac to a warm sage-grey so light bands read apart from paper.
+        "vars": dict(navy="3a2150", navy_deep="241033", green="7d9573", green_dk="4e6a48",
+                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="eef1ea", paper="fffdfb",
+                     ink="2a1c33", muted="6c5d75", line="e1e7db"),
         "css": ".btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
     },
