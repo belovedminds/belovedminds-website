@@ -166,7 +166,10 @@
   .subhead + .grid{margin-top:12px}
 
   /* MISSION & VISION */
-  .mv{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  /* On the dark green band the mission cards and tribute photos read as light objects. */
+  .mv .mvcard{border-color:rgba(255,255,255,.2)}
+  .mv .trib{background:var(--paper);border-color:rgba(255,255,255,.22)}
+  .mv .tribute .lede{color:#c9ddd0}
   .mvgrid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:22px}
   @media(max-width:820px){.mvgrid{grid-template-columns:1fr}}
   .mvcard{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold-deep);border-radius:12px;padding:19px}
@@ -439,7 +442,7 @@
 </section>
 
 <!-- MISSION & VISION -->
-<section class="mv" id="mission">
+<section class="mv b-sage" id="mission">
   <div class="wrap">
     <p class="eyebrow">Mission &amp; vision</p>
     <h2>Why we exist</h2>
