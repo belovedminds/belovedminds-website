@@ -153,6 +153,10 @@
 
   /* IMAGERY */
   .splitgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
+  .splitgrid.flip{grid-template-columns:.92fr 1.08fr}
+  .splitgrid.flip>div:first-child{order:2}
+  .splitgrid.flip>div:last-child{order:1}
+  @media(max-width:820px){.splitgrid.flip>div:first-child,.splitgrid.flip>div:last-child{order:0}}
   @media(max-width:820px){.splitgrid{grid-template-columns:1fr;gap:28px}}
   /* Circular badge artwork sits on a solid field with a caption; clipping the container to a
      circle removes both, so no blend or mask is needed on any background colour. */
@@ -455,7 +459,7 @@
 <!-- FEATURES -->
 <section class="b-cream">
   <div class="wrap">
-    <div class="splitgrid">
+    <div class="splitgrid flip">
       <div>
         <p class="eyebrow">How it's built</p>
         <h2>Every choice here is a memory-care decision</h2>
