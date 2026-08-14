@@ -36,9 +36,14 @@ THEMES = [
         # Greens sit just off the blue side of green, not the yellow side. Olive-leaning
         # greens read earthy and fight a cool plum; this harmonises with it without
         # drifting to teal. green_dk clears WCAG AA (~5.9:1) on the light bands.
-        # Plum is the only carry-over. Bands alternate bold and light: deep plum and deep
-        # forest green as the bold blocks, warm cream / light plum / light sage as the
-        # light ones. Colour comes from saturated blocks, never from tinting a whole page.
+        # ── LOCKED, approved 2026-08-14. Do not change without Rebecca saying so. ──
+        #   plum   navy #3a2150 / navy_deep #241033   (the hero gradient runs across both)
+        #   gold   gold #f9d46b / gold_lt #fbebbc     (button sheen lives in .btn, not here)
+        # Everything else below is still open.
+        #
+        # Bands alternate bold and light: deep plum and deep forest green as the bold
+        # blocks, warm cream and light sage as the light ones. Colour comes from
+        # saturated blocks, never from tinting a whole page.
         "vars": dict(navy="3a2150", navy_deep="241033", green="4a8163", green_dk="2f6b4f",
                      gold="f9d46b", gold_lt="fbebbc", gold_deep="8a5a0a", cream="f7f2e8", paper="ffffff",
                      ink="2a1c33", muted="574a60", line="e7ded0"),
