@@ -26,10 +26,11 @@ THEMES = [
         "slug": "plum",
         "name": "Royal Plum",
         "blurb": "Rich aubergine purple and gold — matches the new reference image. Elegant, premium, dignified.",
-        # gold warmed from hue 43° (mustard) to ~38° (true gold); gold_deep passes
-        # WCAG AA (≥4.5:1) on both cream and paper for small text on light bands.
+        # gold brightened out of mustard: same ~38° hue, higher value + saturation so it
+        # reads as gold rather than brown. gold_deep still passes WCAG AA (~5.3:1) on
+        # both cream and paper for small text on light bands.
         "vars": dict(navy="3a2150", navy_deep="241033", green="8a5cb0", green_dk="6a3f92",
-                     gold="c28f3c", gold_lt="ecd49a", gold_deep="866014", cream="f6f1f7", paper="fffdfb",
+                     gold="d9a441", gold_lt="f2dca8", gold_deep="8a5a0a", cream="f6f1f7", paper="fffdfb",
                      ink="2a1c33", muted="6c5d75", line="e6dced"),
         "css": "nav{background:rgba(36,16,51,.96)}.btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
