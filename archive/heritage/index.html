@@ -18,7 +18,7 @@
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:106px}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;letter-spacing:-.01em}
@@ -28,9 +28,9 @@
   /* Cream bar over the deep plum hero — the contrast is the point, not another dark tone. */
   nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid color-mix(in srgb,var(--navy) 16%,transparent);transition:box-shadow .25s ease}
   nav.scrolled{box-shadow:0 8px 26px rgba(36,16,51,.16)}
-  nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:94px}
+  nav .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:108px}
   .brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0}
-  .brand img{height:72px;width:auto;display:block;mix-blend-mode:multiply;filter:saturate(1.3) contrast(1.12)}
+  .brand img{height:86px;width:auto;display:block;mix-blend-mode:multiply;filter:saturate(1.3) contrast(1.12)}
   .brand span{font-family:var(--serif);font-size:29px;color:var(--navy-deep);letter-spacing:.02em;line-height:1}
   .navright{display:flex;align-items:center;gap:18px}
   .navlinks a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500;opacity:.85}
@@ -54,7 +54,7 @@
   .navlinks .btn{margin:14px 24px 20px;text-align:center}
   @media(max-width:860px){
     .navlinks{left:0;right:0;min-width:0;border-radius:0;border-left:none;border-right:none}
-    .brand img{height:58px}
+    .brand img{height:70px}
     .brand span{font-size:22px}
   }
   @media(max-width:640px){.nav-cta{display:none}}
@@ -168,6 +168,9 @@
   .disc.sq{border-radius:16px}
   .disc.constellation{width:min(320px,80%)}
   .disc.constellation img{width:140%;top:51%}
+  /* Cropped from the concept sheet to the mended-heart tile alone. */
+  .disc.heart{width:min(300px,78%)}
+  .disc.heart img{width:227%;left:100%;top:-5%}
   /* Cropped to Janet alone; object-position favours the left of the frame. */
   /* Twisted gold cord. Diagonal light/mid/dark bands read as the twist of a rope. */
   .ropetop{position:relative}
@@ -474,7 +477,7 @@
     <div class="grid g4 tight">
       <div class="card"><div class="ic">🎚️</div><h3>Cognitive Engagement Level <span class="pat">Patent pending</span></h3><p>Every resident is set to one of five engagement levels. At Level 1, Bella asks open-ended questions and follows wherever the conversation goes. At Level 5, she carries nearly all of it, weaving a resident's own family memories into one continuous story — they may not say anything back, but the memory is still theirs, and hearing it can still bring them joy.</p></div>
       <div class="card"><div class="ic">🧭</div><h3>Confusion Response Mode <span class="pat">Patent pending</span></h3><p>Families choose how Bella responds when a resident is confused: agree, gently redirect, or offer a gentle correction. It's the single most consequential setting in memory care. Families make the call, and it's honored on every call — no resident is ever argued with or made to feel small.</p></div>
-      <div class="card"><div class="ic">📉</div><h3>Priority Alerts <span class="pat">Patent pending</span></h3><p>The platform learns each resident's baseline, then alerts on three things: a gradual drift away from it across a series of calls, a sudden drop from one call to the next, or a trigger word in conversation — each followed by a clarifying question before anything is raised. Confusion on its own is expected in memory care and is never treated as an alarm. What reaches your team is what actually warrants attention.</p></div>
+      <div class="card"><div class="ic">📉</div><h3>Priority Alerts <span class="pat">Patent pending</span></h3><p>The platform learns each resident's baseline, then alerts on: a gradual drift away from it across days, a sudden drop, or a trigger word in conversation — each followed by a clarifying question before anything is raised. Confusion on its own is expected in memory care and is never treated as an alarm. What reaches your team is what actually warrants attention.</p></div>
       <div class="card"><div class="ic">📖</div><h3>Story Cards <span class="pat">Patent pending</span></h3><p>Not every call produces one. But when a resident shares something that matters — a memory, a moment, something they'd want remembered — it becomes a formatted keepsake the family can keep and return to. The stories they tell, captured and preserved, so what they carry is never lost.</p></div>
     </div>
 
@@ -620,9 +623,14 @@
      to facilities. When the B2C offering launches, this section becomes the direct door. -->
 <section id="families" class="b-plum">
   <div class="wrap">
+    <div class="splitgrid flip">
+      <div>
     <p class="eyebrow">For families</p>
     <h2>You'll know how today went — every day</h2>
     <p class="lede">Families of memory care residents carry a specific kind of grief: the grief of distance, and of not knowing. Beloved Minds gives you real daily knowledge, the earliest possible awareness when something changes, and something to keep at the end.</p>
+      </div>
+      <div><div class="disc sq heart"><img src="../../assets/compilation.jpg" alt="A mended heart"></div></div>
+    </div>
     <div class="grid g2" style="margin-top:30px">
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>A synopsis after every call</b><span>What they talked about, how engaged they were, and how they seemed. Daily knowledge, not a monthly newsletter.</span></div></div>
