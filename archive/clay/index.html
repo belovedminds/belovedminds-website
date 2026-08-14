@@ -113,6 +113,8 @@
 
   .grid{display:grid;gap:14px;margin-top:20px}
   .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}}
   /* Cards size to their own content instead of stretching to the tallest in the row. */
   .grid.tight{align-items:start}
   @media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
@@ -159,6 +161,8 @@
   .disc img{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:none;display:block}
   .disc.doves{width:min(310px,82%)}
   /* Cropped to Janet alone; object-position favours the left of the frame. */
+  /* Transparent PNG — needs no blend, mask or frame on any background. */
+  .seal{width:min(74%,230px);display:block;margin:0 auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.22))}
   .photo{width:min(70%,320px);display:block;margin:0 auto;
     border-radius:18px;box-shadow:0 22px 50px rgba(0,0,0,.36),0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
   .disc.doves img{width:115%;top:53%}
@@ -442,12 +446,17 @@
 <!-- FEATURES -->
 <section class="b-cream">
   <div class="wrap">
-    <p class="eyebrow">How it's built</p>
-    <h2>Every choice here is a memory-care decision</h2>
-    <p class="lede">Built for dementia and Alzheimer's alone — not adapted for it. Bella calls residents every day, adjusts to where each resident is in their journey, listens for what changes, and preserves what they leave behind. Everything below is built and owned by Beloved Minds.</p>
+    <div class="splitgrid">
+      <div>
+        <p class="eyebrow">How it's built</p>
+        <h2>Every choice here is a memory-care decision</h2>
+        <p class="lede">Built for dementia and Alzheimer's alone — not adapted for it. Bella calls residents every day, adjusts to where each resident is in their journey, listens for what changes, and preserves what they leave behind. Everything below is built and owned by Beloved Minds.</p>
+      </div>
+      <div><img class="seal" src="../../assets/seal.png" alt="Beloved Minds Partner Facility official seal"></div>
+    </div>
 
     <p class="subhead">The four that define us</p>
-    <div class="grid g2 tight">
+    <div class="grid g4 tight">
       <div class="card"><div class="ic">🎚️</div><h3>Cognitive Engagement Level <span class="pat">Patent pending</span></h3><p>Every resident is set to one of five engagement levels. At Level 1, someone still holding a conversation gets open-ended questions, and Bella follows wherever they go. At Level 5 — someone who may say very little all day — she carries nearly the whole conversation, weaving their own family memories into one continuous story. They may not be able to say anything back. But the memory is still theirs, and hearing it can still bring them joy.</p></div>
       <div class="card"><div class="ic">🧭</div><h3>Confusion Response Mode <span class="pat">Patent pending</span></h3><p>Families choose how Bella responds when a resident is confused: agree, gently redirect, or offer a gentle correction. This is the single most consequential setting in memory care. Families make the call, and it is honored on every call, every day — no resident is ever argued with or made to feel small.</p></div>
       <div class="card"><div class="ic">📉</div><h3>Priority Alerts <span class="pat">Patent pending</span></h3><p>The platform learns each resident's own normal, then watches for three things: a gradual drift away from it across a series of calls, a sudden drop on a single call, or a trigger word in conversation — followed by a clarifying question before anything is raised. Confusion on its own is expected in memory care and is never treated as an alarm. What reaches your team is what actually warrants attention.</p></div>
