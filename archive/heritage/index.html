@@ -156,6 +156,9 @@
     box-shadow:0 20px 48px rgba(0,0,0,.34),0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
   .disc img{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:none;display:block}
   .disc.doves{width:min(310px,82%)}
+  /* Cropped to Janet alone; object-position favours the left of the frame. */
+  .photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:22% 26%;display:block;
+    border-radius:18px;box-shadow:0 22px 50px rgba(0,0,0,.36),0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
   .disc.doves img{width:115%;top:53%}
   /* The lockup is artwork on near-black. Screen blend drops most of it, clip-path cuts the
      baked-in tagline, and the radial mask feathers the edges so no card outline remains. */
@@ -408,10 +411,15 @@
 <!-- HOW IT WORKS -->
 <section id="how" class="b-sage">
   <div class="wrap">
+    <div class="splitgrid">
+      <div>
     <p class="eyebrow">What actually happens</p>
     <h2>One call. Everything it sets in motion.</h2>
     <p class="story">Every day, Bella calls Janet by name. She asks about the year she was crowned rodeo queen, about the secret language her mother invented, about the singing bear at Disneyland whose song the family laughed about for decades — because she knows all of it. Janet laughs. She tells a story she has told before, and it is met as though for the first time. When she can't find a word, Bella waits. When she's confused, Bella agrees, because that is what her daughter asked for.</p>
-    <p class="lede">That is one call. Here is what it sets in motion — without anyone on your team lifting a finger.</p>
+      </div>
+      <div><img class="photo" src="../../assets/Mom.png" alt="Janet, smiling at home"></div>
+    </div>
+    <p class="lede" style="margin-top:26px">That is one call. Here is what it sets in motion — without anyone on your team lifting a finger.</p>
     <div class="grid g2" style="margin-top:18px">
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>Her daughter hears how she is — today</b><span>A synopsis after every call: what they talked about, how engaged she was, how she seemed. Not a monthly newsletter. The same day.</span></div></div>
