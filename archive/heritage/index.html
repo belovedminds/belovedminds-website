@@ -233,11 +233,12 @@
   footer .fbrand{display:flex;align-items:center;gap:10px}
   /* Same treatment as the Beloved Hands mark: trim the baked-in tagline, feather the edges
      so the artwork dissolves into the plum instead of showing a card outline. */
-  footer .fbrand img{height:46px;mix-blend-mode:screen;
-    clip-path:inset(0 0 26% 0);
-    filter:contrast(1.45) brightness(1.04);
-    -webkit-mask-image:radial-gradient(ellipse 88% 84% at 50% 38%, #000 62%, transparent 94%);
-    mask-image:radial-gradient(ellipse 88% 84% at 50% 38%, #000 62%, transparent 94%)}
+  /* Cropped to the mark alone — the wordmark sits beside it in text, so the version baked
+     into the file was a duplicate. object-fit crops without leaving dead space. */
+  footer .fbrand img{width:104px;height:44px;object-fit:cover;object-position:50% 10%;
+    mix-blend-mode:screen;filter:contrast(1.5) brightness(1.05);
+    -webkit-mask-image:radial-gradient(ellipse 92% 90% at 50% 50%, #000 56%, transparent 96%);
+    mask-image:radial-gradient(ellipse 92% 90% at 50% 50%, #000 56%, transparent 96%)}
   footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:17px}
   footer .small{opacity:.8;max-width:50ch}
 </style>
