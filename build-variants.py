@@ -33,9 +33,12 @@ THEMES = [
         # They now hold a muted sage — warm rather than clinical, and drawn from the leaves
         # in the logo mark. green_dk passes WCAG AA (~5.9:1) on paper for small text.
         # cream shifted off lilac to a warm sage-grey so light bands read apart from paper.
-        "vars": dict(navy="3a2150", navy_deep="241033", green="7d9573", green_dk="4e6a48",
-                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="e2e9da", paper="f5f8f2",
-                     ink="2a1c33", muted="6c5d75", line="cfdac6"),
+        # Greens sit just off the blue side of green, not the yellow side. Olive-leaning
+        # greens read earthy and fight a cool plum; this harmonises with it without
+        # drifting to teal. green_dk clears WCAG AA (~5.9:1) on the light bands.
+        "vars": dict(navy="3a2150", navy_deep="241033", green="6f9078", green_dk="3d6851",
+                     gold="e8b23e", gold_lt="f2dca8", gold_deep="8a5a0a", cream="dfe8e1", paper="f4f8f4",
+                     ink="2a1c33", muted="574a60", line="bfd0c3"),
         "css": ".btn{border-radius:999px}.card{border-radius:18px}"
                ".mvcard,.val,.stat{border-radius:16px}",
     },
