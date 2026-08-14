@@ -102,7 +102,7 @@
   .strip{color:#eaf3ee;text-align:center;padding:24px 0 25px;border-top:1px solid color-mix(in srgb,var(--gold) 28%,transparent)}
   .strip p{margin:0;font-family:var(--serif);font-size:clamp(17px,2.3vw,23px);line-height:1.35}
   .strip b{color:var(--gold-lt);font-weight:600}
-  .strip .sub{margin:13px auto 0;max-width:58ch;font-size:clamp(14px,1.5vw,16.5px);line-height:1.5;color:#bcd2c4}
+  .strip .sub{margin:13px auto 0;max-width:58ch;font-size:clamp(14px,1.5vw,16.5px);line-height:1.5;color:#fff}
 
   /* SECTIONS */
   section{padding:46px 0}
@@ -150,8 +150,13 @@
   /* IMAGERY */
   .splitgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
   @media(max-width:820px){.splitgrid{grid-template-columns:1fr;gap:28px}}
-  .treecard{background:#fff;border-radius:20px;padding:16px;box-shadow:0 20px 46px rgba(0,0,0,.3)}
-  .treecard img{width:100%;display:block;border-radius:12px}
+  /* Circular badge artwork sits on a solid field with a caption; clipping the container to a
+     circle removes both, so no blend or mask is needed on any background colour. */
+  .disc{position:relative;border-radius:50%;overflow:hidden;margin:0 auto;aspect-ratio:1;
+    box-shadow:0 20px 48px rgba(0,0,0,.34),0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
+  .disc img{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:none;display:block}
+  .disc.doves{width:min(310px,82%)}
+  .disc.doves img{width:115%;top:53%}
   /* The lockup is artwork on near-black. Screen blend drops most of it, clip-path cuts the
      baked-in tagline, and the radial mask feathers the edges so no card outline remains. */
   .givemark{display:block;width:min(300px,68%);margin:0 auto 2px;mix-blend-mode:screen;
@@ -164,7 +169,7 @@
   .closer b{color:var(--green-dk)}
   .alt .card h3{font-family:var(--serif);font-size:17px;line-height:1.3;margin:0 0 8px;color:var(--green-dk)}
   .why .big{font-family:var(--serif);font-size:clamp(14.5px,1.65vw,16.5px);line-height:1.6;max-width:66ch;color:var(--ink);margin:16px auto 6px}
-  .why .big b{color:var(--green-dk);font-weight:600}
+  .why .big b{color:color-mix(in srgb,var(--green-dk) 74%,#000);font-weight:600}
 
   /* FEATURES */
   .feat{display:flex;gap:11px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
@@ -376,7 +381,7 @@
     <p class="lede">Bella calls each resident by name, every day. The conversation carries itself when a resident cannot fully partake. Families decide how confusion is met, and at what level their loved one is engaged. Keepsakes are captured with the foresight of what may be lost — but needs to be kept.</p>
     <p class="closer">Every other platform in this space delivers a feature. A call. A check-in. A notification.<br><b>This is something else entirely.</b></p>
       </div>
-      <div class="treecard"><img src="../../assets/logo-tree.jpg" alt="Beloved Minds tree of life and dove"></div>
+      <div class="disc doves"><img src="../../assets/doves.jpg" alt="Two doves before a stained-glass heart"></div>
     </div>
   </div>
 </section>
@@ -389,7 +394,7 @@
     <div class="grid g3">
       <div class="card">
         <h3>“Couldn't our own team do this?”</h3>
-        <p>Your team already does the part that matters most — the care, the presence, the knowing. What no one can do is sit with every resident, every day, and pick up each conversation where it left off. Every resident is a whole life history, held across shifts and turnover. That isn't a shortcoming of any team. It's beyond what any person can hold. Bella holds it, and what she learns sits underneath the care your staff gives, not against it.</p>
+        <p>Your team already does the part that matters most — the care, the presence, the knowing. What no one can do is sit with every resident, every day, and pick up each conversation where it left off. Every resident is a whole life history, held across shifts and turnover. That isn't a shortcoming of any team. It's beyond what any person can hold. Bella holds it, and what she learns sits underneath the care your staff gives, and supports it.</p>
       </div>
       <div class="card">
         <h3>“How is this different from a check-in service?”</h3>
@@ -434,15 +439,15 @@
     <p class="subhead">The three that define us</p>
     <div class="grid g3">
       <div class="card"><div class="ic">🎚️</div><h3>Cognitive Engagement Level <span class="pat">Patent pending</span></h3><p>Every resident is set to one of five engagement levels. At Level 1, someone still holding a conversation gets open-ended questions, and Bella follows wherever they go. At Level 5 — someone who may say very little all day — she carries nearly the whole conversation, weaving their own family memories into one continuous story. They may not be able to say anything back. But the memory is still theirs, and hearing it can still bring them joy.</p></div>
-      <div class="card"><div class="ic">🧭</div><h3>Confusion Response Mode</h3><p>Families choose how Bella responds when a resident is confused: agree, gently redirect, or offer a gentle correction. This is the single most consequential setting in memory care. Families make the call, and it is honored on every call, every day — no resident is ever argued with or made to feel small.</p></div>
-      <div class="card"><div class="ic">📖</div><h3>Story Cards</h3><p>Not every call produces one. But when a resident shares something that matters — a memory, a moment, something they'd want remembered — it becomes a formatted keepsake families can keep. The stories they tell, captured and preserved, so what they carry is never lost.</p></div>
+      <div class="card"><div class="ic">🧭</div><h3>Confusion Response Mode <span class="pat">Patent pending</span></h3><p>Families choose how Bella responds when a resident is confused: agree, gently redirect, or offer a gentle correction. This is the single most consequential setting in memory care. Families make the call, and it is honored on every call, every day — no resident is ever argued with or made to feel small.</p></div>
+      <div class="card"><div class="ic">📖</div><h3>Story Cards <span class="pat">Patent pending</span></h3><p>Not every call produces one. But when a resident shares something that matters — a memory, a moment, something they'd want remembered — it becomes a formatted keepsake families can keep. The stories they tell, captured and preserved, so what they carry is never lost.</p></div>
     </div>
 
     <p class="subhead">Also live at launch</p>
     <div class="grid g2">
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>Family-Seeded Memories</b><span>Families tell Bella who their loved one is — the stories they've told, the names that still land, the work they were proud of, the songs, the dog, the garden. She carries all of it into every call, and never arrives as a stranger.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Priority Alerts</b><span>The platform notices when a resident moves away from their own normal, and tells someone. Confusion is expected in memory care and is never treated as an alarm — what reaches staff is what actually warrants attention.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Priority Alerts <span class="pat">Patent pending</span></b><span>The platform notices when a resident moves away from their own normal, and tells someone. Confusion is expected in memory care and is never treated as an alarm — what reaches staff is what actually warrants attention.</span></div></div>
         <div class="feat"><span class="dot">✓</span><div><b>Voice Verification</b><span>A passive voice-biometric check confirms the right resident before every call begins.</span></div></div>
       </div>
       <div>
