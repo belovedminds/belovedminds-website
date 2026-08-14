@@ -174,10 +174,10 @@ The live page is a single scrolling document. In-page anchors:
 
 Marked in the source with `<!-- EDIT: -->` comments:
 
-- [ ] **Contact form is not wired up.** `index.html` currently has
-      `action="#"` with `onsubmit="return false"` — it silently does nothing.
-      Needs connecting to an email service (Resend, Formspree, or similar).
-      Fix in `template.html`, then rebuild.
+- [x] **Contact form wired to Formspree** — posts to
+      `https://formspree.io/f/xgawzrgd`. Submits via fetch so the visitor stays
+      on the page, with the form's own `action`/`method` as a no-JS fallback.
+      Includes a honeypot field and a subject line.
 - [x] **`privacy.html`** — rebuilt from the counsel-drafted HIPAA Privacy Policy
       (v1.0, effective 2026-08-15). Public-facing adaptation, not the verbatim
       internal document, which is marked Confidential. Adds a website-visitor section.
