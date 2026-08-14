@@ -127,6 +127,7 @@
   .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
   .g4{grid-template-columns:repeat(4,1fr)}
   @media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:820px){.g4{grid-template-columns:1fr}}
   /* Cards size to their own content instead of stretching to the tallest in the row. */
   .grid.tight{align-items:start}
   @media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
@@ -300,10 +301,11 @@
      into the file was a duplicate. object-fit crops without leaving dead space. */
   /* The beacon art is a circular badge on a navy field with a caption beneath. Clipping to a
      circle drops both the field and the caption -- no blend, filter or fade needed. */
+  /* Zoomed inside the badge so the lighthouse fills the frame — no gold ring, no navy field. */
   footer .fmark{position:relative;flex:none;display:block;width:66px;height:66px;
-    border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
-  footer .fmark img{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);
-    width:183%;max-width:none;display:block}
+    border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 38%,transparent)}
+  footer .fmark img{position:absolute;left:50%;top:64%;transform:translate(-50%,-50%);
+    width:256%;max-width:none;display:block}
   footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:13.5px}
   footer .small{opacity:.8;max-width:50ch}
 
