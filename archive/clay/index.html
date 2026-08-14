@@ -113,6 +113,8 @@
 
   .grid{display:grid;gap:14px;margin-top:20px}
   .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  /* Cards size to their own content instead of stretching to the tallest in the row. */
+  .grid.tight{align-items:start}
   @media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:0 1px 3px rgba(20,30,30,.04)}
   .card .ic{width:31px;height:31px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;background:color-mix(in srgb,var(--green) 12%,transparent);margin-bottom:8px}
@@ -157,7 +159,7 @@
   .disc img{position:absolute;left:50%;transform:translate(-50%,-50%);max-width:none;display:block}
   .disc.doves{width:min(310px,82%)}
   /* Cropped to Janet alone; object-position favours the left of the frame. */
-  .photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:22% 26%;display:block;
+  .photo{width:min(70%,320px);display:block;margin:0 auto;
     border-radius:18px;box-shadow:0 22px 50px rgba(0,0,0,.36),0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
   .disc.doves img{width:115%;top:53%}
   /* The lockup is artwork on near-black. Screen blend drops most of it, clip-path cuts the
@@ -264,7 +266,7 @@
     border-radius:50%;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent)}
   footer .fmark img{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);
     width:183%;max-width:none;display:block}
-  footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:17px}
+  footer .fbrand b{font-family:var(--serif);color:var(--gold-lt);font-size:13.5px}
   footer .small{opacity:.8;max-width:50ch}
 
   /* Warm Clay tweaks */
@@ -445,7 +447,7 @@
     <p class="lede">Built for dementia and Alzheimer's alone — not adapted for it. Bella calls residents every day, adjusts to where each resident is in their journey, listens for what changes, and preserves what they leave behind. Everything below is built and owned by Beloved Minds.</p>
 
     <p class="subhead">The four that define us</p>
-    <div class="grid g2">
+    <div class="grid g2 tight">
       <div class="card"><div class="ic">🎚️</div><h3>Cognitive Engagement Level <span class="pat">Patent pending</span></h3><p>Every resident is set to one of five engagement levels. At Level 1, someone still holding a conversation gets open-ended questions, and Bella follows wherever they go. At Level 5 — someone who may say very little all day — she carries nearly the whole conversation, weaving their own family memories into one continuous story. They may not be able to say anything back. But the memory is still theirs, and hearing it can still bring them joy.</p></div>
       <div class="card"><div class="ic">🧭</div><h3>Confusion Response Mode <span class="pat">Patent pending</span></h3><p>Families choose how Bella responds when a resident is confused: agree, gently redirect, or offer a gentle correction. This is the single most consequential setting in memory care. Families make the call, and it is honored on every call, every day — no resident is ever argued with or made to feel small.</p></div>
       <div class="card"><div class="ic">📉</div><h3>Priority Alerts <span class="pat">Patent pending</span></h3><p>The platform learns each resident's own normal, then watches for three things: a gradual drift away from it across a series of calls, a sudden drop on a single call, or a trigger word in conversation — followed by a clarifying question before anything is raised. Confusion on its own is expected in memory care and is never treated as an alarm. What reaches your team is what actually warrants attention.</p></div>
@@ -457,11 +459,11 @@
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>Family-Seeded Memories</b><span>Families tell Bella who their loved one is — the stories they've told, the names that still land, the work they were proud of, the songs, the dog, the garden. She carries all of it into every call, and never arrives as a stranger.</span></div></div>
         <div class="feat"><span class="dot">✓</span><div><b>Voice Verification</b><span>A passive voice-biometric check confirms the right resident before every call begins.</span></div></div>
+        <div class="feat"><span class="dot">✓</span><div><b>Daily family updates</b><span>After every call, families receive a synopsis — engagement, topics discussed, and emotional tone. Daily knowledge, not monthly newsletters.</span></div></div>
       </div>
       <div>
         <div class="feat"><span class="dot">✓</span><div><b>Heirloom Collection</b><span>Every story and meaningful moment a resident has shared, across all their calls, gathered into a single keepsake and delivered to the family when their service comes to an end — complimentary, for any resident who has completed sixty days or more. Not a summary of calls, but a portrait of a person in their own words.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Daily family updates</b><span>After every call, families receive a synopsis — engagement, topics discussed, and emotional tone. Daily knowledge, not monthly newsletters.</span></div></div>
-        <div class="feat"><span class="dot">✓</span><div><b>Staff dashboard</b><span>Engagement scores, mood trends, and flagged events at a glance — fully accessible anytime.</span></div></div>
+                <div class="feat"><span class="dot">✓</span><div><b>Staff dashboard</b><span>Engagement scores, mood trends, and flagged events at a glance — fully accessible anytime.</span></div></div>
       </div>
     </div>
     <!-- Trust & compliance -->
