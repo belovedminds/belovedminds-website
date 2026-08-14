@@ -192,7 +192,7 @@ Marked in the source with `<!-- EDIT: -->` comments:
       (engagement level, confusion response, conversation topics) is placeholder content.
       Rebecca to supply a real, permissioned, anonymized profile. Marked `<!-- EDIT: -->`
       in `template.html`.
-- [ ] **Contact form uses `mailto:`.** Submissions open the sender's mail client addressed
+- [x] **Contact form wired to Formspree** (`https://formspree.io/f/xgawzrgd`). Submissions open the sender's mail client addressed
       to support@belovedminds.care — they are not delivered server-side, so some will be
       lost. Swap `action` to a Formspree/Resend endpoint for real inbox delivery.
 - [ ] **Photography for "What Makes Us Different"** — pending from stakeholder.

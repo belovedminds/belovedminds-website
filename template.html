@@ -682,7 +682,9 @@
       <div>
         <!-- Submits by opening the sender's mail client addressed to support@belovedminds.care.
              EDIT: for true inbox delivery (no mail client needed), swap to Formspree/Resend. -->
-        <form id="pilotform" action="mailto:support@belovedminds.care" method="post" enctype="text/plain">
+        <form id="pilotform" action="https://formspree.io/f/xgawzrgd" method="POST">
+          <input type="hidden" name="_subject" value="Pilot request — belovedminds.care">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
           <label for="name">Your name</label>
           <input id="name" name="name" placeholder="Jane Director" required>
           <label for="facility">Facility</label>
@@ -727,15 +729,29 @@
   window.addEventListener('scroll',onScroll,{passive:true});
 })();
 (function(){
+  // Submits to Formspree in the background so the visitor stays on the page.
+  // If JS fails the form still posts normally via its action attribute.
   var f=document.getElementById('pilotform');
-  if(!f)return;
-  function val(id){var el=document.getElementById(id);return el&&el.value?el.value.trim():''}
+  if(!f||!window.fetch)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var who=val('facility')||val('name')||'Beloved Minds';
-    var body='Name: '+val('name')+'\nFacility: '+val('facility')+'\nEmail: '+val('email')+'\n\n'+val('msg');
-    window.location.href='mailto:support@belovedminds.care?subject='+
-      encodeURIComponent('Pilot request — '+who)+'&body='+encodeURIComponent(body);
+    var btn=f.querySelector('button[type=submit]');
+    if(btn){btn.disabled=true;btn.textContent='Sending…'}
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
+      .then(function(r){
+        if(!r.ok)throw new Error('bad response');
+        f.innerHTML='<p style="margin:0;font-family:var(--serif);font-size:19px;color:#fff">'+
+          'Thank you — your request is in.</p>'+
+          '<p style="margin:10px 0 0;font-size:14px;color:#c7d3d2">'+
+          'You\'ll hear from us within two business days to schedule a call.</p>';
+      })
+      .catch(function(){
+        if(btn){btn.disabled=false;btn.textContent='Request a Pilot'}
+        var w=document.createElement('p');
+        w.style.cssText='margin:12px 0 0;font-size:14px;color:#ffd7d7';
+        w.textContent='Something went wrong sending that. Please email support@belovedminds.care instead.';
+        f.appendChild(w);
+      });
   });
 })();
 </script>
