@@ -66,14 +66,14 @@ The Python script is a **local authoring tool**, not part of the deploy pipeline
 │   ├── slate/index.html     ←   Slate Blue → /archive/slate
 │   └── clay/index.html      ←   Warm Clay → /archive/clay
 └── assets/
-    ├── logo-gold.png        ← Hero logo (edge-feathered via CSS mask)
-    ├── logo-color.png       ← Full-color logo
-    ├── logo-dark.png        ← Footer logo
-    ├── logo-tree.jpg        ← Tree mark
+    ├── logo-gold.png        ← Beloved Hands mark (blended, masked)
+    ├── logo-color.png       ← Nav logo
+    ├── beacon.jpg           ← Footer lighthouse (cropped to the tower in CSS)
+    ├── doves.jpg / constellation.jpg / seal.png / Mom.png / family-morning.jpg
+    │                        ← Section artwork and founder photo
     ├── loretta-williams.jpg / alessandra-la-bruzzo.jpg / lucile-cameron.jpg
     │                        ← "In loving memory" tribute photos (web-optimized)
-    ├── favicon.svg / .png / -32.png / -180.png
-    └── reference-*.png      ← Design references from stakeholder review (not shipped in page)
+    └── favicon.svg / -32.png / -180.png
 ```
 
 ## How the theme build works
