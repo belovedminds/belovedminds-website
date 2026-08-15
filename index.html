@@ -235,7 +235,9 @@
   .mvgrid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:22px}
   @media(max-width:820px){.mvgrid{grid-template-columns:1fr}}
   .mvcard{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold-deep);border-radius:12px;padding:19px}
-  .mvcard h3{font-size:17.5px;margin:0 0 7px;color:var(--green-dk)}
+  /* Quiet label: the statement below it is the line that should land, and when both
+     were green the heading competed with it. */
+  .mvcard h3{font-size:17.5px;margin:0 0 7px;color:var(--muted)}
   .mvcard p{margin:0 0 9px;color:#3a4a4d;font-size:13.5px;line-height:1.55}
   .mvcard p:last-child{margin-bottom:0}
   .mvcard p.statement{font-size:15.5px;line-height:1.35;font-weight:600;color:var(--green-dk);margin-bottom:9px}
@@ -266,7 +268,9 @@
   .tribgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:820px;margin:18px auto 0}
   @media(max-width:820px){.tribgrid{grid-template-columns:1fr;max-width:300px}}
   .trib{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:11px 11px 7px;text-align:center}
-  .trib img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 28%;border-radius:9px;display:block}
+  /* Portrait frame, not square. All three source photos are taller than they are wide,
+     so a 1:1 crop took the top of the head and the chin. */
+  .trib img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 28%;border-radius:9px;display:block}
   .trib figcaption{padding:9px 4px 4px}
   .trib figcaption b{display:block;font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--ink)}
   .trib figcaption span{font-size:12px;color:var(--muted)}
