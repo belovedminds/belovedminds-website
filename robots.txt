@@ -1,11 +1,8 @@
+# Pre-launch: the site is meant to be reached by link — from flyers, cards, and
+# direct outreach — but not to turn up in search results.
+#
+# Crawling is deliberately ALLOWED. Every page carries <meta name="robots"
+# content="noindex">, and a crawler has to fetch the page to see that tag.
+# Blocking here would hide the instruction and Google could still list the URL.
 User-agent: *
 Allow: /
-
-# Palette variants and the build source are near-identical copies of the
-# homepage. GitHub Pages serves the whole repo, so they are reachable — keep
-# them out of the index or they compete with the real page.
-Disallow: /plum/
-Disallow: /archive/
-Disallow: /template.html
-
-Sitemap: https://belovedminds.care/sitemap.xml
