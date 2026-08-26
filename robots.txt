@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Palette variants and the build source are near-identical copies of the
+# homepage. GitHub Pages serves the whole repo, so they are reachable — keep
+# them out of the index or they compete with the real page.
+Disallow: /plum/
+Disallow: /archive/
+Disallow: /template.html
+
+Sitemap: https://belovedminds.care/sitemap.xml
