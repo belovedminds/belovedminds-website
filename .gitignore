@@ -3,3 +3,6 @@
 
 # source photos (web-optimized copies live in assets/)
 img/
+
+# local Claude Code settings — never belongs on the live site
+.claude/

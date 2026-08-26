@@ -1,0 +1,50 @@
+name: Deploy to GoDaddy
+
+# Publishes the site to GoDaddy hosting on every push to main.
+# Can also be run by hand from the Actions tab (Run workflow).
+#
+# Requires three repository secrets — Settings > Secrets and variables > Actions:
+#   FTP_HOST      the FTP server, e.g. ftp.belovedminds.care
+#   FTP_USER      the FTP username from cPanel
+#   FTP_PASSWORD  that user's password
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never let two deploys write to the server at once.
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload site to GoDaddy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: ./public_html/
+          # Ship only the public site. Everything else here is source or working
+          # files: template.html is what build-variants.py renders index.html from,
+          # and plum/ + archive/ are palette variants kept for reference.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .claude/**
+            .github/**
+            template.html
+            build-variants.py
+            README.md
+            LICENSE
+            archive/**
+            plum/**
