@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Beloved Minds sitemap.
+
+  Lists only the four real, public-facing pages. The design variants
+  (/plum/, /archive/clay/, /archive/heritage/, /archive/slate/) and
+  /template.html are deliberately LEFT OUT: they are near-identical
+  copies of the homepage, and listing them would ask Google to index
+  duplicate content and possibly rank the wrong one.
+
+  Those variants each carry <meta name="robots" content="noindex">.
+  Keep it that way. When the noindex tags come off the four pages below
+  at launch, do NOT strip them from the variants or template.html.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://belovedminds.care/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://belovedminds.care/privacy.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://belovedminds.care/terms.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://belovedminds.care/cancellation.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

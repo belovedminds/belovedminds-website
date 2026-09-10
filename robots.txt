@@ -6,3 +6,5 @@
 # Blocking here would hide the instruction and Google could still list the URL.
 User-agent: *
 Allow: /
+
+Sitemap: https://belovedminds.care/sitemap.xml
