@@ -1,0 +1,19 @@
+# GitHub Pages build settings.
+#
+# These files stay in the repository but are NOT published to the live site.
+#
+# template.html is the single source of truth that build-variants.py reads to
+# generate index.html, plum/ and archive/<slug>/ — so it must not be deleted.
+# But publishing it, and the generated variants, put five near-identical copies
+# of the homepage on belovedminds.care. Google reads that as duplicate content
+# and has to guess which one is the real front page.
+#
+# Keeping them out of the build removes that risk for good, and means nobody has
+# to remember to preserve their noindex tags.
+exclude:
+  - template.html
+  - build-variants.py
+  - plum/
+  - archive/
+  - README.md
+  - LICENSE
