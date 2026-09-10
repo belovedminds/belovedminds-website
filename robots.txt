@@ -1,9 +1,16 @@
-# Pre-launch: the site is meant to be reached by link — from flyers, cards, and
-# direct outreach — but not to turn up in search results.
+# The site is open to search engines. The four real pages — home, privacy,
+# terms, and cancellation — carry no robots meta tag, so they index normally.
 #
-# Crawling is deliberately ALLOWED. Every page carries <meta name="robots"
-# content="noindex">, and a crawler has to fetch the page to see that tag.
-# Blocking here would hide the instruction and Google could still list the URL.
+# The design variants (/plum/, /archive/clay/, /archive/heritage/,
+# /archive/slate/) and /template.html each still carry
+# <meta name="robots" content="noindex, nofollow">. They are near-identical
+# copies of the homepage; letting them index would put duplicate content in
+# front of Google and risk ranking a variant over the real front page.
+# Leave those tags alone.
+#
+# Crawling stays ALLOWED for everything: a crawler has to fetch a page to
+# read its noindex tag, so blocking here would hide the instruction and
+# Google could still list the URL.
 User-agent: *
 Allow: /
 
