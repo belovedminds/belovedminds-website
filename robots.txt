@@ -1,5 +1,5 @@
-# The site is open to search engines. The four real pages — home, privacy,
-# terms, and cancellation — carry no robots meta tag, so they index normally.
+# The site is open to search engines. The four real pages, home, privacy,
+# terms and cancellation, carry no robots meta tag, so they index normally.
 #
 # The design variants (/plum/, /archive/clay/, /archive/heritage/,
 # /archive/slate/) and /template.html each still carry
