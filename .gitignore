@@ -6,3 +6,9 @@ img/
 
 # local Claude Code settings — never belongs on the live site
 .claude/
+
+# saved web pages dropped in by accident. This repo is public, so anything
+# committed here is world readable permanently.
+Account security.html
+Account security_files/
+*_files/
